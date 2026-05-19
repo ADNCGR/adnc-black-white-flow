@@ -76,7 +76,7 @@ function Home() {
           <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
             <span>ADNC / 001</span>
             <span className="hidden md:inline">Build × Operate × Grow</span>
-            <span>Est. independent · worldwide</span>
+            <span className="text-lime-700">Est. independent · worldwide</span>
           </div>
 
           {/* Massive type slab */}
