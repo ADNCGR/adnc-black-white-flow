@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoMark from "@/assets/adnc-logo-mark.png";
+import logoBlack from "@/assets/adnc-logo-black.png";
 
 const links = [
   { to: "/services", label: "Services" },
@@ -32,11 +32,8 @@ export function Nav() {
             scrolled ? "bg-paper/90 shadow-sm" : "bg-paper/60"
           }`}
         >
-          <Link to="/" className="flex items-center gap-2 py-3">
-            <img src={logoMark} alt="ADNC Group" className="w-8 h-8 object-contain" />
-            <span className="font-display font-semibold tracking-tight">
-              ADNC<span className="text-muted-foreground"> Group</span>
-            </span>
+          <Link to="/" className="flex items-center py-3">
+            <img src={logoBlack} alt="ADNC Group" className="h-8 w-auto object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
