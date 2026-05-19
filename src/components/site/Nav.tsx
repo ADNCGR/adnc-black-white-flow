@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logoMark from "@/assets/adnc-logo-mark.png";
 
 const links = [
   { to: "/services", label: "Services" },
@@ -32,9 +33,7 @@ export function Nav() {
           }`}
         >
           <Link to="/" className="flex items-center gap-2 py-3">
-            <span className="grid place-items-center w-8 h-8 rounded-md bg-ink text-paper font-display font-bold text-sm">
-              A
-            </span>
+            <img src={logoMark} alt="ADNC Group" className="w-8 h-8 object-contain" />
             <span className="font-display font-semibold tracking-tight">
               ADNC<span className="text-muted-foreground"> Group</span>
             </span>
