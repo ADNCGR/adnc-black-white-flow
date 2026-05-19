@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { MockupCard } from "@/components/site/MockupCard";
+import { Sticker } from "@/components/site/Sticker";
+import { Ticker } from "@/components/site/Ticker";
 import { heroMockup, mockups } from "@/data/mockups";
 
 export const Route = createFileRoute("/")({
@@ -68,7 +70,7 @@ function Home() {
               </p>
               <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold text-balance">
                 Turning complex ideas into{" "}
-                <span className="italic font-light text-ink-soft">flawless</span> mobile
+                <span className="italic font-light text-kinetic">flawless</span> mobile
                 applications.
               </h1>
               <p className="mt-8 text-lg md:text-xl text-ink-soft max-w-xl">
@@ -78,13 +80,13 @@ function Home() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center rounded-full bg-ink text-paper px-6 py-3.5 font-medium hover:bg-ink-soft transition"
+                  className="mag inline-flex items-center rounded-full bg-ink text-paper px-6 py-3.5 font-medium hover:bg-ink-soft transition"
                 >
                   Talk to our team →
                 </Link>
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center rounded-full border border-ink/20 px-6 py-3.5 font-medium hover:border-ink transition"
+                  className="mag inline-flex items-center rounded-full border border-ink/20 px-6 py-3.5 font-medium hover:border-ink transition"
                 >
                   See our work
                 </Link>
@@ -92,7 +94,8 @@ function Home() {
             </div>
 
             <div className="lg:col-span-5 reveal">
-              <div className="relative aspect-square max-w-lg mx-auto">
+              <div className="relative aspect-square max-w-lg mx-auto float-slow">
+                <div className="halo" />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-secondary to-paper" />
                 <img
                   src={heroMockup.image}
@@ -101,6 +104,9 @@ function Home() {
                   height={1280}
                   className="relative w-full h-full object-contain grayscale drop-shadow-2xl"
                 />
+                <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6">
+                  <Sticker />
+                </div>
               </div>
             </div>
           </div>
@@ -165,14 +171,17 @@ function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-px bg-border">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <div
                 key={s.n}
-                className="bg-paper p-8 md:p-10 transition hover:bg-paper-soft group"
+                data-reveal
+                style={{ ["--reveal-delay" as any]: `${i * 90}ms` }}
+                className="bg-paper p-8 md:p-10 transition hover:bg-paper-soft group relative overflow-hidden"
               >
+                <div className="absolute inset-x-0 -bottom-1 h-px bg-ink scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700" />
                 <div className="flex items-start justify-between">
                   <span className="font-display text-sm text-muted-foreground">{s.n}</span>
-                  <span className="opacity-0 group-hover:opacity-100 transition">→</span>
+                  <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">→</span>
                 </div>
                 <h3 className="font-display text-2xl md:text-3xl mt-8">{s.t}</h3>
                 <p className="mt-4 text-ink-soft max-w-md">{s.d}</p>
@@ -181,6 +190,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* TICKER */}
+      <Ticker items={["iOS", "Android", "React Native", "Flutter", "AI on device", "Realtime", "Design systems", "0 → 1"]} />
+
 
       {/* WORK */}
       <section className="bg-paper-soft">

@@ -3,15 +3,18 @@ import type { Mockup } from "@/data/mockups";
 export function MockupCard({ mockup, index }: { mockup: Mockup; index: number }) {
   const reverse = index % 2 === 1;
   return (
-    <article className="grid md:grid-cols-12 gap-8 md:gap-12 items-center py-16 md:py-24 border-t border-border">
+    <article data-reveal className="grid md:grid-cols-12 gap-8 md:gap-12 items-center py-16 md:py-24 border-t border-border">
       <div className={`md:col-span-6 ${reverse ? "md:order-2" : ""}`}>
-        <div className="relative aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-3xl bg-gradient-to-b from-paper-soft to-secondary">
-          <img
-            src={mockup.image}
-            alt={mockup.title}
-            loading="lazy"
-            className="w-full h-full object-cover grayscale"
-          />
+        <div className="relative aspect-[3/4] max-w-md mx-auto">
+          <div className="halo" />
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-paper-soft to-secondary mag group h-full">
+            <img
+              src={mockup.image}
+              alt={mockup.title}
+              loading="lazy"
+              className="w-full h-full object-cover grayscale transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+            />
+          </div>
         </div>
       </div>
       <div className={`md:col-span-6 ${reverse ? "md:order-1" : ""}`}>
