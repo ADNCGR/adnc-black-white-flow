@@ -171,14 +171,17 @@ function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-px bg-border">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <div
                 key={s.n}
-                className="bg-paper p-8 md:p-10 transition hover:bg-paper-soft group"
+                data-reveal
+                style={{ ["--reveal-delay" as any]: `${i * 90}ms` }}
+                className="bg-paper p-8 md:p-10 transition hover:bg-paper-soft group relative overflow-hidden"
               >
+                <div className="absolute inset-x-0 -bottom-1 h-px bg-ink scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-700" />
                 <div className="flex items-start justify-between">
                   <span className="font-display text-sm text-muted-foreground">{s.n}</span>
-                  <span className="opacity-0 group-hover:opacity-100 transition">→</span>
+                  <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">→</span>
                 </div>
                 <h3 className="font-display text-2xl md:text-3xl mt-8">{s.t}</h3>
                 <p className="mt-4 text-ink-soft max-w-md">{s.d}</p>
@@ -187,6 +190,10 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* TICKER */}
+      <Ticker items={["iOS", "Android", "React Native", "Flutter", "AI on device", "Realtime", "Design systems", "0 → 1"]} />
+
 
       {/* WORK */}
       <section className="bg-paper-soft">
