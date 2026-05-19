@@ -80,7 +80,7 @@ function ServicesPage() {
         <div className="mx-auto max-w-5xl px-6 py-24 text-center">
           <h2 className="font-display text-4xl md:text-5xl">Engagement models built for ambition.</h2>
           <div className="mt-12 grid sm:grid-cols-3 gap-px bg-paper/15">
-            {["Embedded team", "End-to-end product", "Staff augmentation"].map((t) => (
+            {["Build with us", "Build & operate", "Operate & grow existing apps"].map((t) => (
               <div key={t} className="bg-ink p-8">
                 <h3 className="font-display text-xl">{t}</h3>
               </div>
