@@ -14,10 +14,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const principles = [
-  { t: "Senior by default", d: "Every project staffed with senior engineers and designers. No bait-and-switch." },
-  { t: "Craft is the strategy", d: "We obsess over the small details users feel but cannot articulate." },
-  { t: "Ship to learn", d: "Weekly releases, real users, real signal — from the first sprint." },
-  { t: "Own the outcome", d: "We measure ourselves on what the app does in users' hands, not what shipped." },
+  { t: "Build & operate", d: "We don't just ship code — we run the platforms we build, with our own DevOps, support and growth teams." },
+  { t: "Senior by default", d: "Every engagement staffed with senior engineers, operators and account leads. No bait-and-switch." },
+  { t: "Internalized, not outsourced", d: "Our customer support and call center are in-house — directly wired into the product team." },
+  { t: "Own the outcome", d: "We measure ourselves on uptime, NPS, retention and B2B pipeline — not just shipped features." },
 ];
 
 function AboutPage() {
@@ -28,14 +28,15 @@ function AboutPage() {
           <div className="md:col-span-7">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">About</p>
             <h1 className="font-display text-5xl md:text-7xl mt-4 text-balance">
-              A studio of senior makers, obsessed with mobile.
+              Two sides of the same business: we build apps, and we run them.
             </h1>
           </div>
           <div className="md:col-span-5 md:pt-16">
             <p className="text-lg text-ink-soft">
-              ADNC Group was founded to build the kind of mobile applications we always
-              wanted to use — fast, considered, beautifully restrained. We work as one
-              embedded team with our clients, from first prototype to App Store.
+              ADNC Group was founded to be the partner we always wanted: one team that
+              designs and engineers complex web & mobile applications, and that
+              operates them in production — DevOps, scaling, an internalized customer
+              support and call center, and a B2B growth arm to bring in clients.
             </p>
           </div>
         </div>
