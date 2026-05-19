@@ -8,14 +8,14 @@ import { heroMockup, mockups } from "@/data/mockups";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ADNC Group — Complex mobile applications, engineered" },
+      { title: "ADNC Group — We build and operate complex web & mobile applications" },
       {
         name: "description",
         content:
-          "ADNC Group is a development studio building complex, high-performance mobile applications for ambitious companies.",
+          "ADNC Group designs, engineers, scales and operates complex web and mobile applications — from product engineering and DevOps to internalized customer support and B2B growth.",
       },
-      { property: "og:title", content: "ADNC Group — Complex mobile apps" },
-      { property: "og:description", content: "Studio engineering complex mobile applications." },
+      { property: "og:title", content: "ADNC Group — Build & Operate" },
+      { property: "og:description", content: "Two sides, one partner: product engineering and full operations for web & mobile apps." },
     ],
   }),
   component: Home,
@@ -27,32 +27,32 @@ const logos = [
 ];
 
 const stats = [
-  { k: "60+", v: "Applications delivered to production" },
-  { k: "12y", v: "Of compounded mobile engineering expertise" },
+  { k: "60+", v: "Web & mobile applications delivered to production" },
+  { k: "24/7", v: "Internalized customer support & call center coverage" },
   { k: "4.9/5", v: "Average client satisfaction across engagements" },
-  { k: "24", v: "Senior engineers, designers and product leads" },
+  { k: "2", v: "Sides of the business — we build and we operate" },
 ];
 
 const services = [
   {
     n: "01",
-    t: "Mobile product engineering",
-    d: "Native iOS, Android and cross-platform applications architected for performance, security and long-term maintainability at enterprise scale.",
+    t: "Web & mobile product engineering",
+    d: "Complex web platforms, native iOS, Android and cross-platform applications — architected for performance, security and long-term maintainability at enterprise scale.",
   },
   {
     n: "02",
-    t: "Product design & user experience",
-    d: "End-to-end design systems, research and prototyping practices that align stakeholders and accelerate decision-making across the product lifecycle.",
+    t: "DevOps, scaling & cloud operations",
+    d: "Production infrastructure, CI/CD, observability and on-call engineering. We keep your platform fast, resilient and ready for the next order of magnitude.",
   },
   {
     n: "03",
-    t: "Applied AI & on-device intelligence",
-    d: "Production-grade AI capabilities — on-device inference, retrieval pipelines and assistive features — engineered with privacy, governance and cost in mind.",
+    t: "Customer support & internalized call center",
+    d: "An in-house support organization and call center handling your end-users across channels — fully integrated with the product team that built the app.",
   },
   {
     n: "04",
-    t: "Backend platforms & realtime infrastructure",
-    d: "Resilient, offline-capable backends with realtime synchronization, observability and compliance baked in from day one.",
+    t: "B2B growth & client acquisition",
+    d: "We go to market for the applications we operate — sourcing enterprise clients, structuring partnerships and driving B2B pipeline for our portfolio.",
   },
 ];
 
