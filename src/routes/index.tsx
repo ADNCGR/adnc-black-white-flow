@@ -162,10 +162,10 @@ function Home() {
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                Our capabilities
+                Two sides, one partner
               </p>
               <h2 className="font-display text-4xl md:text-5xl mt-3 max-w-2xl text-balance">
-                An integrated mobile practice covering strategy, design, engineering and operations.
+                We build the applications, then we run them — engineering, operations and growth under one roof.
               </h2>
             </div>
             <Link to="/services" className="text-sm underline underline-offset-4">
