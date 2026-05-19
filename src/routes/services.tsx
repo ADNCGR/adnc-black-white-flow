@@ -5,9 +5,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — ADNC Group" },
-      { name: "description", content: "Mobile engineering, product design, AI and backend services for complex mobile applications." },
+      { name: "description", content: "Web & mobile engineering, DevOps & scaling, internalized customer support and B2B growth — the full build & operate stack." },
       { property: "og:title", content: "Services — ADNC Group" },
-      { property: "og:description", content: "Mobile engineering, design, AI and backend." },
+      { property: "og:description", content: "Build & operate complex web and mobile applications." },
     ],
   }),
   component: ServicesPage,
@@ -16,23 +16,23 @@ export const Route = createFileRoute("/services")({
 const groups = [
   {
     n: "01",
-    title: "Mobile Engineering",
-    items: ["Native iOS (Swift, SwiftUI)", "Native Android (Kotlin, Compose)", "React Native & Flutter", "Performance & profiling", "Release engineering & CI/CD"],
+    title: "Web & Mobile Engineering",
+    items: ["Complex web platforms (React, Next, TanStack)", "Native iOS (Swift, SwiftUI)", "Native Android (Kotlin, Compose)", "React Native & Flutter", "Performance, security & release engineering"],
   },
   {
     n: "02",
-    title: "Product & Design",
-    items: ["Product strategy & discovery", "UX research", "Interaction design", "Design systems", "Prototyping & motion"],
+    title: "DevOps, Scaling & Cloud Ops",
+    items: ["Production infrastructure & CI/CD", "Observability & SRE practices", "Auto-scaling & cost optimization", "Incident response & on-call", "Security & compliance"],
   },
   {
     n: "03",
-    title: "AI & Data",
-    items: ["On-device ML (CoreML, LiteRT)", "RAG & assistant features", "LLM evaluations", "Personalization", "Vector & semantic search"],
+    title: "Customer Support & Call Center",
+    items: ["Internalized support team", "Multi-channel (voice, chat, email)", "24/7 coverage models", "Tier 1 → Tier 3 escalation", "Tight loop with product & engineering"],
   },
   {
     n: "04",
-    title: "Backend & Cloud",
-    items: ["Realtime APIs", "Sync engines & offline-first", "Edge functions", "Observability", "Security & compliance"],
+    title: "B2B Growth & Acquisition",
+    items: ["Go-to-market for the apps we operate", "Enterprise client sourcing", "Partnership structuring", "Sales operations & pipeline", "Account management"],
   },
 ];
 
