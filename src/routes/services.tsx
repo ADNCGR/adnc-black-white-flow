@@ -43,11 +43,12 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Services</p>
           <h1 className="font-display text-5xl md:text-7xl mt-4 max-w-4xl text-balance">
-            End-to-end mobile product engineering, under one roof.
+            Build the application. Operate it. Grow it.
           </h1>
           <p className="mt-8 text-lg text-ink-soft max-w-2xl">
-            We embed senior teams across product, design and engineering — shipping in
-            weeks, not quarters, with full ownership from research to release.
+            ADNC Group is two sides of the same business: senior product engineering
+            and a full operations arm — DevOps, an internalized customer support and
+            call center, and a B2B team that goes to market for the apps we run.
           </p>
         </div>
       </section>
