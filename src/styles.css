@@ -120,4 +120,92 @@
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* === Cursor blob === */
+  .cursor-blob {
+    position: fixed;
+    top: 0; left: 0;
+    width: 28px; height: 28px;
+    border-radius: 9999px;
+    background: var(--color-ink);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 100;
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+  }
+  .cursor-blob[data-hover="1"] {
+    width: 72px; height: 72px;
+    background: var(--color-paper);
+  }
+  @media (pointer: coarse) { .cursor-blob { display: none; } }
+
+  /* === Noise overlay === */
+  .noise {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* === Scroll reveal === */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  [data-reveal].is-in { opacity: 1; transform: translateY(0); }
+  [data-reveal="scale"] { transform: scale(0.94); }
+  [data-reveal="scale"].is-in { transform: scale(1); }
+
+  /* === Ticker === */
+  .ticker { animation: marquee 28s linear infinite; }
+
+  /* === Kinetic gradient text === */
+  .text-kinetic {
+    background: linear-gradient(120deg, var(--color-ink) 0%, var(--color-ink) 40%, oklch(0.55 0 0) 50%, var(--color-ink) 60%, var(--color-ink) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s linear infinite;
+  }
+  @keyframes shine {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  /* === Float === */
+  .float-slow { animation: float 8s ease-in-out infinite; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+  }
+
+  /* === Sticker (rotating badge) === */
+  .sticker { position: relative; width: 140px; height: 140px; }
+  .sticker-spin { width: 100%; height: 100%; animation: spin 18s linear infinite; }
+  .sticker-dot {
+    position: absolute; inset: 0; margin: auto;
+    width: 18px; height: 18px; border-radius: 9999px;
+    background: var(--color-ink);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* === Glow halo === */
+  .halo {
+    position: absolute; inset: -20%;
+    background: radial-gradient(closest-side, oklch(0.85 0 0 / 0.6), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* === Magnetic hover === */
+  .mag { transition: transform 0.4s cubic-bezier(.2,.8,.2,1); }
+  .mag:hover { transform: translateY(-4px) scale(1.02); }
+
+  /* === Marquee hover pause === */
+  .marquee:hover, .ticker:hover { animation-play-state: paused; }
 }
