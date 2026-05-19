@@ -27,32 +27,32 @@ const logos = [
 ];
 
 const stats = [
-  { k: "60+", v: "Apps shipped" },
-  { k: "12y", v: "In mobile engineering" },
-  { k: "4.9/5", v: "Average client rating" },
-  { k: "24", v: "Senior engineers & designers" },
+  { k: "60+", v: "Applications delivered to production" },
+  { k: "12y", v: "Of compounded mobile engineering expertise" },
+  { k: "4.9/5", v: "Average client satisfaction across engagements" },
+  { k: "24", v: "Senior engineers, designers and product leads" },
 ];
 
 const services = [
   {
     n: "01",
     t: "Mobile product engineering",
-    d: "Native iOS, Android and cross-platform apps built for scale, speed and longevity.",
+    d: "Native iOS, Android and cross-platform applications architected for performance, security and long-term maintainability at enterprise scale.",
   },
   {
     n: "02",
-    t: "Product design & UX",
-    d: "Interaction-led design systems and prototypes that ship the same week they're sketched.",
+    t: "Product design & user experience",
+    d: "End-to-end design systems, research and prototyping practices that align stakeholders and accelerate decision-making across the product lifecycle.",
   },
   {
     n: "03",
-    t: "AI on device",
-    d: "On-device inference, RAG pipelines and AI features that respect privacy and battery.",
+    t: "Applied AI & on-device intelligence",
+    d: "Production-grade AI capabilities — on-device inference, retrieval pipelines and assistive features — engineered with privacy, governance and cost in mind.",
   },
   {
     n: "04",
-    t: "Backend & realtime",
-    d: "Realtime, offline-first backends. Edge functions, sync engines, observability included.",
+    t: "Backend platforms & realtime infrastructure",
+    d: "Resilient, offline-capable backends with realtime synchronization, observability and compliance baked in from day one.",
   },
 ];
 
@@ -66,7 +66,7 @@ function Home() {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 reveal">
               <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-                Mobile · AI · Product engineering
+                Mobile engineering · Applied AI · Product strategy
               </p>
               <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold text-balance">
                 Turning complex ideas into{" "}
@@ -74,21 +74,22 @@ function Home() {
                 applications.
               </h1>
               <p className="mt-8 text-lg md:text-xl text-ink-soft max-w-xl">
-                ADNC Group is a senior product studio engineering ambitious mobile
-                products for startups and enterprises around the world.
+                ADNC Group is an independent product engineering firm partnering with
+                ambitious organizations to design, build and scale mission-critical
+                mobile platforms.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   to="/contact"
                   className="mag inline-flex items-center rounded-full bg-ink text-paper px-6 py-3.5 font-medium hover:bg-ink-soft transition"
                 >
-                  Talk to our team →
+                  Request a consultation →
                 </Link>
                 <Link
                   to="/portfolio"
                   className="mag inline-flex items-center rounded-full border border-ink/20 px-6 py-3.5 font-medium hover:border-ink transition"
                 >
-                  See our work
+                  Explore our portfolio
                 </Link>
               </div>
             </div>
@@ -135,10 +136,10 @@ function Home() {
           <div className="grid md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
               <p className="text-xs uppercase tracking-[0.25em] text-paper/50">
-                Why ADNC
+                Why ADNC Group
               </p>
               <h2 className="font-display text-4xl md:text-5xl mt-4 text-balance">
-                Trusted by founders and Fortune-class teams alike.
+                A trusted partner for founders, scale-ups and global enterprises.
               </h2>
             </div>
             <div className="md:col-span-7 grid grid-cols-2 gap-8">
@@ -159,14 +160,14 @@ function Home() {
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                What we do
+                Our capabilities
               </p>
               <h2 className="font-display text-4xl md:text-5xl mt-3 max-w-2xl text-balance">
-                A full-stack mobile studio — from first sketch to App Store.
+                An integrated mobile practice covering strategy, design, engineering and operations.
               </h2>
             </div>
             <Link to="/services" className="text-sm underline underline-offset-4">
-              All services →
+              View all services →
             </Link>
           </div>
 
@@ -200,10 +201,10 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
           <div className="mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Selected work
+              Selected engagements
             </p>
             <h2 className="font-display text-4xl md:text-5xl mt-3 text-balance">
-              Mobile products that millions actually use.
+              Mobile platforms operating at scale across industries.
             </h2>
           </div>
           {mockups.map((m, i) => (
@@ -221,17 +222,17 @@ function Home() {
       <section className="fade-section-dark">
         <div className="mx-auto max-w-5xl px-6 py-28 md:py-36 text-center">
           <h2 className="font-display text-4xl md:text-6xl text-balance">
-            Have a mobile product worth getting right?
+            Planning a strategic mobile initiative?
           </h2>
           <p className="mt-6 text-paper/70 text-lg max-w-xl mx-auto">
-            Tell us about it. We reply within one business day with a senior team and a
-            point of view.
+            Share your objectives with our team. We respond within one business day
+            with a senior point of view and a clear path forward.
           </p>
           <Link
             to="/contact"
             className="inline-flex mt-10 items-center rounded-full bg-paper text-ink px-7 py-4 font-medium hover:bg-paper/90 transition"
           >
-            Start a project →
+            Start a conversation →
           </Link>
         </div>
       </section>
