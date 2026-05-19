@@ -195,7 +195,7 @@ function Home() {
       </section>
 
       {/* TICKER */}
-      <Ticker items={["iOS", "Android", "React Native", "Flutter", "AI on device", "Realtime", "Design systems", "0 → 1"]} />
+      <Ticker items={["Web apps", "iOS", "Android", "DevOps & scaling", "24/7 support", "Internal call center", "B2B acquisition", "Operate & grow"]} />
 
 
       {/* WORK */}
