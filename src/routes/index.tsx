@@ -66,18 +66,20 @@ function Home() {
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 reveal">
               <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-                Mobile engineering · Applied AI · Product strategy
+                We build · We operate · We grow
               </p>
               <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold text-balance">
                 Turning complex ideas into{" "}
-                <span className="italic font-light text-kinetic">flawless</span> mobile
-                applications.
+                <span className="italic font-light text-kinetic">flawless</span> web &
+                mobile applications — then running them.
               </h1>
               <p className="mt-8 text-lg md:text-xl text-ink-soft max-w-xl">
-                ADNC Group is an independent product engineering firm partnering with
-                ambitious organizations to design, build and scale mission-critical
-                mobile platforms.
+                ADNC Group is a two-sided partner: a senior product engineering studio
+                that designs and ships complex web & mobile applications, and a full
+                operations arm that scales them — DevOps, an internalized customer
+                support and call center, and B2B growth for the products we run.
               </p>
+
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
                   to="/contact"
