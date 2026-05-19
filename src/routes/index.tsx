@@ -27,32 +27,32 @@ const logos = [
 ];
 
 const stats = [
-  { k: "60+", v: "Apps shipped" },
-  { k: "12y", v: "In mobile engineering" },
-  { k: "4.9/5", v: "Average client rating" },
-  { k: "24", v: "Senior engineers & designers" },
+  { k: "60+", v: "Applications delivered to production" },
+  { k: "12y", v: "Of compounded mobile engineering expertise" },
+  { k: "4.9/5", v: "Average client satisfaction across engagements" },
+  { k: "24", v: "Senior engineers, designers and product leads" },
 ];
 
 const services = [
   {
     n: "01",
     t: "Mobile product engineering",
-    d: "Native iOS, Android and cross-platform apps built for scale, speed and longevity.",
+    d: "Native iOS, Android and cross-platform applications architected for performance, security and long-term maintainability at enterprise scale.",
   },
   {
     n: "02",
-    t: "Product design & UX",
-    d: "Interaction-led design systems and prototypes that ship the same week they're sketched.",
+    t: "Product design & user experience",
+    d: "End-to-end design systems, research and prototyping practices that align stakeholders and accelerate decision-making across the product lifecycle.",
   },
   {
     n: "03",
-    t: "AI on device",
-    d: "On-device inference, RAG pipelines and AI features that respect privacy and battery.",
+    t: "Applied AI & on-device intelligence",
+    d: "Production-grade AI capabilities — on-device inference, retrieval pipelines and assistive features — engineered with privacy, governance and cost in mind.",
   },
   {
     n: "04",
-    t: "Backend & realtime",
-    d: "Realtime, offline-first backends. Edge functions, sync engines, observability included.",
+    t: "Backend platforms & realtime infrastructure",
+    d: "Resilient, offline-capable backends with realtime synchronization, observability and compliance baked in from day one.",
   },
 ];
 
