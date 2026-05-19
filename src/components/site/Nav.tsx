@@ -36,9 +36,6 @@ export function Nav() {
             <img src={logoBlack} alt="ADNC Group" className="h-8 w-auto object-contain" />
           </Link>
 
-            </span>
-          </Link>
-
           <nav className="hidden md:flex items-center gap-1">
             {links.map((l) => (
               <Link
