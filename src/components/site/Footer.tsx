@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logoWhite from "@/assets/logo-white.png";
 
 export function Footer() {
   return (
@@ -6,11 +7,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="grid place-items-center w-9 h-9 rounded-md bg-paper text-ink font-display font-bold">
-                A
-              </span>
-              <span className="font-display text-xl font-semibold">ADNC Group</span>
+            <div className="flex items-center mb-6">
+              <img src={logoWhite} alt="ADNC Group" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-paper/70 max-w-md text-balance">
               We design, engineer and ship complex mobile applications for ambitious
