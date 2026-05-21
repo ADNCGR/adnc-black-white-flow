@@ -29,7 +29,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">Contact</h4>
             <p className="text-paper/80">hello@adncgroup.com</p>
-            <p className="text-paper/80 mt-1">Available worldwide · HQ Europe</p>
+            <p className="text-paper/80 mt-1">Available worldwide · HQ Casablanca, Morocco</p>
             <Link
               to="/contact"
               className="inline-flex items-center mt-6 rounded-full bg-paper text-ink px-5 py-2.5 text-sm font-medium hover:bg-paper/90 transition"
