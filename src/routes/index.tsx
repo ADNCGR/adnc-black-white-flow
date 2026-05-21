@@ -195,9 +195,7 @@ function Home() {
                 <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Side A</p>
                 <h3 className="font-display text-5xl md:text-6xl mt-4">Build.</h3>
                 <p className="mt-6 text-ink-soft text-lg max-w-md">
-                  Senior product engineering for complex web and mobile applications.
-                  From discovery to release — design systems, native &amp; cross-platform,
-                  realtime backends, AI features, the hard parts.
+                  {"\n"}
                 </p>
                 <ul className="mt-10 space-y-3 text-ink">
                   {["Product strategy & discovery", "Web platforms (React, Next, TanStack)", "Native iOS & Android", "Realtime backends & APIs", "Applied AI & data"].map((i) => (
