@@ -46,7 +46,8 @@ const services = [
   {
     n: "04",
     t: "B2B growth & client acquisition",
-    d: "We go to market for the applications we operate — sourcing enterprise clients, structuring partnerships and driving B2B pipeline for our portfolio.",
+    d: "We go to market for the platforms we operate. Sourcing enterprise clients, structuring partnerships and driving the B2B pipeline that turns products into businesses.",
+
   },
 ];
 
