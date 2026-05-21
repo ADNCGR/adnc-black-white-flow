@@ -329,8 +329,7 @@ function Home() {
           </h2>
           <div className="mt-16 grid md:grid-cols-12 gap-10 items-end">
             <p className="md:col-span-6 text-paper/70 text-lg max-w-xl">
-              Share your objectives with our team. We respond within one business day
-              with a senior point of view, a clear path forward — and the team that
+              Share your objectives with our team. We respond with a senior point of view, a clear path forward and the team that
               would build and operate it.
             </p>
             <div className="md:col-span-6 flex md:justify-end">
