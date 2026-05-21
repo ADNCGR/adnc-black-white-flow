@@ -89,7 +89,7 @@ function Home() {
               <span className="block text-outline">We operate.</span>
               <span className="block">
                 We{" "}
-                <span className="word-rotator italic font-light text-kinetic">
+                <span className="word-rotator italic font-light text-ink">
                   <span>scale.</span>
                   <span>support.</span>
                   <span>grow.</span>
