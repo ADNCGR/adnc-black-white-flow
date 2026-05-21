@@ -293,7 +293,7 @@ function Home() {
               { n: "01", t: "Discover", d: "We map your business, your users and the technical constraints. We come back with a sharp brief, a senior team and a clear path to production." },
               { n: "02", t: "Design & engineer", d: "Senior product, design and engineering teams ship in tight loops. Real software, in real environments, every week." },
               { n: "03", t: "Launch & scale", d: "We harden the platform, set up DevOps, monitoring and on-call. The product goes live ready for the next order of magnitude." },
-              { n: "04", t: "Operate & grow", d: "Our internal support, call center and B2B teams take over the long game — customers served, accounts won, retention compounded." },
+              { n: "04", t: "Operate & grow", d: "Our in-house support, call center and B2B teams take over the long game. Customers served, accounts won, retention compounded." },
             ].map((step, i) => (
               <div
                 key={step.n}
