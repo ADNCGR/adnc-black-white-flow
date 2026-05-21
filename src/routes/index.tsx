@@ -76,7 +76,7 @@ function Home() {
           <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
             <span className="text-slate-800">ADNC / 001</span>
             <span className="hidden md:inline">Build × Operate × Grow</span>
-            <span className="text-lime-700">Est. independent · worldwide</span>
+            <span className="text-zinc-950">Est. independent · worldwide</span>
           </div>
 
           {/* Massive type slab */}
@@ -192,7 +192,7 @@ function Home() {
                 01
               </div>
               <div className="relative">
-                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Side A</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">OPERATE</p>
                 <h3 className="font-display text-5xl md:text-6xl mt-4">Build.</h3>
                 <p className="mt-6 text-ink-soft text-lg max-w-md">
                   {"\n"}
