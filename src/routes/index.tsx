@@ -75,7 +75,7 @@ function Home() {
           {/* Top eyebrow rail */}
           <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
             <span className="text-slate-950">build</span>
-            <span className="hidden md:inline">Build × Operate × Grow</span>
+            <span className="hidden md:inline">Operate</span>
             <span className="text-zinc-950">Est. independent · worldwide</span>
           </div>
 
