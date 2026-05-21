@@ -319,7 +319,7 @@ function Home() {
         <div className="absolute inset-0 grain opacity-40 pointer-events-none" />
         <div className="orb orb-paper w-[50vw] h-[50vw] -bottom-[20vw] -right-[15vw] drift-x" aria-hidden />
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-32 md:py-48 relative">
-          <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Chapter 05 — Talk</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Talk</p>
           <h2
             className="font-display font-medium mt-6 leading-[0.85] tracking-[-0.045em] text-balance"
             style={{ fontSize: "clamp(3rem, 11vw, 14rem)" }}
