@@ -279,7 +279,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40">
           <div className="grid md:grid-cols-12 gap-10 mb-20">
             <div className="md:col-span-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Chapter 04 — Method</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">METHOD</p>
               <h2 className="font-display text-5xl md:text-6xl mt-4 text-balance">
                 From a first call to a platform in production — and beyond.
               </h2>
