@@ -102,10 +102,13 @@ function Home() {
           <div className="mt-16 md:mt-24 grid lg:grid-cols-12 gap-10 items-end">
             <div className="lg:col-span-5">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed">
-                ADNC Group is a two-sided partner: a senior product engineering studio
-                that designs and ships complex web &amp; mobile applications, and a full
-                operations arm that runs them — DevOps, an internalized customer support
-                and call center, and a B2B growth team for the products we operate.
+                ADNC Group is an end-to-end operating partner for complex software. We
+                architect, engineer, harden, and deploy production-grade web and
+                mobile platforms across the full stack: distributed backends, native
+                iOS and Android, real-time infrastructure, applied AI, cloud DevOps,
+                and security at every layer. Then we run them in production. SRE,
+                internalized customer support, and a B2B sales team that brings you
+                the partners and enterprise clients to scale.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link
