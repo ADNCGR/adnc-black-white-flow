@@ -233,43 +233,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ============ STATS / TRUST ============ */}
-      <section className="sweep relative overflow-hidden">
-        <div className="absolute inset-0 grain pointer-events-none" />
-        <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40 relative">
-          <div className="grid md:grid-cols-12 gap-10 mb-20">
-            <div className="md:col-span-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Chapter 02 — Proof</p>
-              <h2 className="font-display text-5xl md:text-6xl mt-4 text-balance">
-                A trusted partner for founders, scale-ups and global enterprises.
-              </h2>
-            </div>
-            <div className="md:col-span-7 md:pt-10">
-              <p className="text-ink-soft text-lg max-w-xl ml-auto">
-                We embed senior teams, take production-grade ownership and stay long
-                after the launch. Our reputation is built on what happens after shipping —
-                not before.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4">
-            {stats.map((s, i) => (
-              <div
-                key={s.v}
-                data-reveal
-                style={{ ["--reveal-delay" as never]: `${i * 100}ms` }}
-                className="border-t border-ink/15 pt-6 pr-4 pb-10"
-              >
-                <div className="num-monolith" style={{ fontSize: "clamp(4rem, 10vw, 9rem)" }}>
-                  {s.k}
-                </div>
-                <div className="mt-4 text-ink-soft text-sm md:text-base max-w-[14rem]">{s.v}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ============ DARK CAPABILITIES THEATER ============ */}
       <section className="bg-ink text-paper relative overflow-hidden">
