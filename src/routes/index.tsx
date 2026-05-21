@@ -41,7 +41,8 @@ const services = [
   {
     n: "03",
     t: "Customer support & internalized call center",
-    d: "An in-house support organization and call center handling your end-users across channels — fully integrated with the product team that built the app.",
+    d: "An in-house support organization and call center handling your end-users across every channel. Fully integrated with the product team that built the app, so feedback loops close in hours, not weeks.",
+
   },
   {
     n: "04",
