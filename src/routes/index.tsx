@@ -31,7 +31,7 @@ const services = [
   {
     n: "01",
     t: "Web & mobile product engineering",
-    d: "Complex web platforms, native iOS, Android and cross-platform applications — architected for performance, security and long-term maintainability at enterprise scale.",
+    d: "Talk",
   },
   {
     n: "02",
