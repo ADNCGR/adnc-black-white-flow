@@ -240,7 +240,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40 relative">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-20">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Chapter 03 — Capabilities</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Capabilities</p>
               <h2 className="font-display text-5xl md:text-7xl mt-4 max-w-3xl text-balance">
                 Engineering, operations and growth — <span className="italic font-light text-outline-paper">under one roof.</span>
               </h2>
