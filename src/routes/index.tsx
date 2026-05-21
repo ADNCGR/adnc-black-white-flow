@@ -223,7 +223,7 @@ function Home() {
                   to the platforms we operate.
                 </p>
                 <ul className="mt-10 space-y-3">
-                  {["DevOps, SRE & cloud operations", "24/7 multi-channel support", "Internalized call center", "B2B sales & account management", "Continuous product evolution"].map((i) => (
+                  {["DevOps, SRE & cloud operations", "multi-channel support", "Internalized call center", "B2B sales & account management", "Continuous product evolution"].map((i) => (
                     <li key={i} className="flex items-center gap-3 border-t border-paper/15 pt-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-paper" /> {i}
                     </li>
