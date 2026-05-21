@@ -29,7 +29,7 @@ function ContactPage() {
             </p>
             <div className="mt-12 space-y-2 text-ink-soft">
               <p>hello@adncgroup.com</p>
-              <p>Available worldwide · HQ Europe</p>
+              <p>Available worldwide · HQ Casablanca, Morocco</p>
             </div>
           </div>
 
