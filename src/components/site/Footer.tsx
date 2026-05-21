@@ -41,7 +41,7 @@ export function Footer() {
 
         <div className="mt-16 pt-6 border-t border-paper/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-paper/50">
           <p>© {new Date().getFullYear()} ADNC Group. All rights reserved.</p>
-          <p>Crafted in monochrome.</p>
+          <p>​</p>
         </div>
       </div>
     </footer>
