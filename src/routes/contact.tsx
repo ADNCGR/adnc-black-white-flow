@@ -21,14 +21,14 @@ function ContactPage() {
       <section className="fade-section">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-6">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Contact</p>
+            <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Contact</p>
             <h1 className="font-display text-5xl md:text-7xl mt-4 text-balance">Let's build something worth opening every day.</h1>
             <p className="mt-8 text-lg text-ink-soft max-w-md">
               Share a few details and the right person on our team will reply within one
               business day.
             </p>
             <div className="mt-12 space-y-2 text-ink-soft">
-              <p>hello@adncgroup.com</p>
+              <p>{"\n"}</p>
               <p>Available worldwide · HQ Casablanca, Morocco</p>
             </div>
           </div>

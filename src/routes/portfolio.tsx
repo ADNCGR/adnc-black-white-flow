@@ -158,7 +158,7 @@ function WorkPage() {
 
           {/* What the founder gets */}
           <div className="mt-24 md:mt-32">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">
               What the founder gets
             </p>
             <h3 className="font-display text-4xl md:text-5xl mt-4 max-w-3xl text-balance">
@@ -220,7 +220,7 @@ function WorkPage() {
       {/* CLOSING + CTA */}
       <section className="bg-paper relative">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">
             One studio
           </p>
           <h2
