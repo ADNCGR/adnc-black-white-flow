@@ -24,15 +24,15 @@ function AboutPage() {
   return (
     <Layout>
       <section className="fade-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-28 grid md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-7">
             <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">About</p>
-            <h1 className="font-display text-5xl md:text-7xl mt-4 text-balance">
+            <h1 className="font-display text-4xl md:text-7xl mt-4 text-balance break-words">
               Two sides of the same business: we build apps, and we run them.
             </h1>
           </div>
           <div className="md:col-span-5 md:pt-16">
-            <p className="text-lg text-ink-soft">
+            <p className="text-base md:text-lg text-ink-soft">
               ADNC Group was founded to be the partner we always wanted: one team that
               designs and engineers complex web & mobile applications, and that
               operates them in production — DevOps, scaling, an internalized customer
@@ -42,15 +42,16 @@ function AboutPage() {
         </div>
       </section>
 
+
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <h2 className="font-display text-3xl md:text-4xl mb-12">Principles</h2>
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+          <h2 className="font-display text-3xl md:text-4xl mb-10 md:mb-12">Principles</h2>
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {principles.map((p, i) => (
-              <div key={p.t} className="bg-paper p-10">
+              <div key={p.t} className="bg-paper p-6 md:p-10">
                 <div className="text-muted-foreground text-sm">0{i + 1}</div>
-                <h3 className="font-display text-2xl mt-6">{p.t}</h3>
-                <p className="mt-3 text-ink-soft max-w-md">{p.d}</p>
+                <h3 className="font-display text-xl md:text-2xl mt-4 md:mt-6">{p.t}</h3>
+                <p className="mt-3 text-ink-soft max-w-md text-sm md:text-base">{p.d}</p>
               </div>
             ))}
           </div>
@@ -58,15 +59,16 @@ function AboutPage() {
       </section>
 
       <section className="fade-section-dark">
-        <div className="mx-auto max-w-5xl px-6 py-24 text-center">
-          <h2 className="font-display text-4xl md:text-5xl text-balance">
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24 text-center">
+          <h2 className="font-display text-3xl md:text-5xl text-balance">
             Want to know if we're the right partner?
           </h2>
-          <Link to="/contact" className="inline-flex mt-10 items-center rounded-full bg-paper text-ink px-6 py-3 font-medium">
+          <Link to="/contact" className="inline-flex mt-8 md:mt-10 items-center rounded-full bg-paper text-ink px-6 py-3 font-medium">
             Get in touch →
           </Link>
         </div>
       </section>
+
     </Layout>
   );
 }
