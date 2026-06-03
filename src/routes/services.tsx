@@ -41,7 +41,7 @@ function ServicesPage() {
     <Layout>
       <section className="fade-section">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Services</p>
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Services</p>
           <h1 className="font-display text-5xl md:text-7xl mt-4 max-w-4xl text-balance">
             Build the application. Operate it. Grow it.
           </h1>

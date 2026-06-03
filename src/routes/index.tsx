@@ -75,7 +75,7 @@ function Home() {
 
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 pt-10 md:pt-16 pb-12">
           {/* Top eyebrow rail */}
-          <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
+          <div className="flex items-center justify-between uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm mb-10">
             <span className="text-slate-950">build</span>
             <span className="hidden md:inline">Operate</span>
             <span className="text-zinc-950">GROW</span>
@@ -180,7 +180,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-24 md:py-36">
           <div className="flex items-end justify-between mb-16">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Chapter 01 — The model</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Chapter 01 — The model</p>
               <h2 className="font-display text-5xl md:text-7xl mt-4 max-w-3xl text-balance">
                 One partner. <span className="italic font-light">Two sides.</span>
               </h2>
@@ -194,7 +194,7 @@ function Home() {
                 01
               </div>
               <div className="relative">
-                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">OPERATE</p>
+                <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">OPERATE</p>
                 <h3 className="font-display text-5xl md:text-6xl mt-4">Build.</h3>
                 <p className="mt-6 text-ink-soft text-lg max-w-md">
                   {"\n"}
@@ -215,7 +215,7 @@ function Home() {
                 02
               </div>
               <div className="relative">
-                <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Side B</p>
+                <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Side B</p>
                 <h3 className="font-display text-5xl md:text-6xl mt-4">Operate.</h3>
                 <p className="mt-6 text-paper/70 text-lg max-w-md">
                   Then we run them. DevOps and scaling, an internalized customer support
@@ -242,7 +242,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40 relative">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-20">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Capabilities</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Capabilities</p>
               <h2 className="font-display text-5xl md:text-7xl mt-4 max-w-3xl text-balance">
                 Engineering, operations and growth — <span className="italic font-light text-outline-paper">under one roof.</span>
               </h2>
@@ -281,7 +281,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-28 md:py-40">
           <div className="grid md:grid-cols-12 gap-10 mb-20">
             <div className="md:col-span-5">
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">METHOD</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">METHOD</p>
               <h2 className="font-display text-5xl md:text-6xl mt-4 text-balance">
                 From a first call to a platform in production — and beyond.
               </h2>
@@ -319,7 +319,7 @@ function Home() {
         <div className="absolute inset-0 grain opacity-40 pointer-events-none" />
         <div className="orb orb-paper w-[50vw] h-[50vw] -bottom-[20vw] -right-[15vw] drift-x" aria-hidden />
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-32 md:py-48 relative">
-          <p className="text-xs uppercase tracking-[0.3em] text-paper/50">Talk</p>
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Talk</p>
           <h2
             className="font-display font-medium mt-6 leading-[0.85] tracking-[-0.045em] text-balance"
             style={{ fontSize: "clamp(3rem, 11vw, 14rem)" }}

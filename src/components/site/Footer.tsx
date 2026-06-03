@@ -27,7 +27,7 @@ export function Footer() {
 
           <div className="md:col-span-4">
             <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">Contact</h4>
-            <p className="text-paper/80">hello@adncgroup.com</p>
+            <p className="text-paper/80">{"\n"}</p>
             <p className="text-paper/80 mt-1">Available worldwide · HQ Casablanca, Morocco</p>
             <Link
               to="/contact"

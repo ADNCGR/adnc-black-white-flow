@@ -26,7 +26,7 @@ function AboutPage() {
       <section className="fade-section">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-7">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">About</p>
+            <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">About</p>
             <h1 className="font-display text-5xl md:text-7xl mt-4 text-balance">
               Two sides of the same business: we build apps, and we run them.
             </h1>
