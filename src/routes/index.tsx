@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
-import { Sticker } from "@/components/site/Sticker";
 import { Ticker } from "@/components/site/Ticker";
-import { heroMockup } from "@/data/mockups";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -100,9 +98,9 @@ function Home() {
             </h1>
           </div>
 
-          {/* Lower band */}
+          {/* Lower band — text only, no image */}
           <div className="mt-16 md:mt-24 grid lg:grid-cols-12 gap-10 items-end">
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-7">
               <p className="text-lg md:text-xl text-ink-soft leading-relaxed">
                 ADNC Group is an end-to-end operating partner for complex software. We
                 architect, engineer, harden, and deploy production-grade web and
@@ -112,42 +110,20 @@ function Home() {
                 internalized customer support, and a B2B sales team that brings you
                 the partners and enterprise clients to scale.
               </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  to="/contact"
-                  className="mag inline-flex items-center rounded-full bg-ink text-paper px-7 py-4 font-medium hover:bg-ink-soft transition"
-                >
-                  Request a consultation →
-                </Link>
-                <Link
-                  to="/services"
-                  className="mag inline-flex items-center rounded-full border border-ink/20 px-7 py-4 font-medium hover:border-ink transition"
-                >
-                  See what we do
-                </Link>
-              </div>
             </div>
-
-            <div className="lg:col-span-7 lg:pl-10">
-              <div className="relative aspect-[4/3] w-full">
-                <div className="halo" />
-                <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-secondary via-paper to-paper-soft border border-border overflow-hidden">
-                  {/* Floating mockup */}
-                  <img
-                    src={heroMockup.image}
-                    alt={heroMockup.alt}
-                    className="absolute right-[-4%] bottom-[-6%] h-[120%] object-contain grayscale drop-shadow-2xl float-slow"
-                  />
-                  {/* Side rail */}
-                  <div className="absolute top-6 left-6 side-rail text-muted-foreground">
-                    ​
-                  </div>
-                  {/* Sticker */}
-                  <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8">
-                    <Sticker />
-                  </div>
-                </div>
-              </div>
+            <div className="lg:col-span-5 flex flex-col items-start lg:items-end gap-4">
+              <Link
+                to="/contact"
+                className="mag inline-flex items-center rounded-full bg-ink text-paper px-7 py-4 font-medium hover:bg-ink-soft transition"
+              >
+                Request a consultation →
+              </Link>
+              <Link
+                to="/services"
+                className="mag inline-flex items-center rounded-full border border-ink/20 px-7 py-4 font-medium hover:border-ink transition"
+              >
+                See what we do
+              </Link>
             </div>
           </div>
         </div>
