@@ -43,7 +43,7 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Services</p>
           <h1 className="font-display text-5xl md:text-7xl mt-4 max-w-4xl text-balance">
-            Build the application. Operate it. Grow it.
+            ​
           </h1>
           <p className="mt-8 text-lg text-ink-soft max-w-2xl">
             ADNC Group is two sides of the same business: senior product engineering

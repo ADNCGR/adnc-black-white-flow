@@ -76,9 +76,9 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 pt-10 md:pt-16 pb-12">
           {/* Top eyebrow rail */}
           <div className="flex items-center justify-between uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm mb-10">
-            <span className="text-slate-950">build</span>
-            <span className="hidden md:inline">Operate</span>
-            <span className="text-zinc-950">GROW</span>
+            <span className="text-slate-950">​</span>
+            <span className="hidden md:inline">​</span>
+            <span className="text-zinc-950">​</span>
           </div>
 
           {/* Massive type slab */}
@@ -140,7 +140,7 @@ function Home() {
                   />
                   {/* Side rail */}
                   <div className="absolute top-6 left-6 side-rail text-muted-foreground">
-                    Engineered &nbsp;·&nbsp; Operated &nbsp;·&nbsp; Owned
+                    ​
                   </div>
                   {/* Sticker */}
                   <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8">
