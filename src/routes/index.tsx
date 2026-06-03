@@ -140,7 +140,7 @@ function Home() {
                   />
                   {/* Side rail */}
                   <div className="absolute top-6 left-6 side-rail text-muted-foreground">
-                    Engineered &nbsp;·&nbsp; Operated &nbsp;·&nbsp; Owned
+                    ​
                   </div>
                   {/* Sticker */}
                   <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8">
