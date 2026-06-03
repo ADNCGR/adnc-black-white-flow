@@ -46,7 +46,7 @@ function ContactPage() {
               <>
                 {[
                   { id: "name", label: "Your name" },
-                  { id: "email", label: "Work email", type: "email" },
+                  { id: "email", label: "Email", type: "email" },
                   { id: "company", label: "Company (optional)" },
                 ].map((f) => (
                   <div key={f.id}>
