@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
-import { Sticker } from "@/components/site/Sticker";
 import { Ticker } from "@/components/site/Ticker";
-import { heroMockup } from "@/data/mockups";
 
 export const Route = createFileRoute("/")({
   head: () => ({
