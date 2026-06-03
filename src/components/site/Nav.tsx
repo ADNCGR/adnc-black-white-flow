@@ -4,7 +4,7 @@ import logoBlack from "@/assets/adnc-logo-black.png";
 
 const links = [
   { to: "/services", label: "Services" },
-  { to: "/portfolio", label: "Work" },
+  { to: "/portfolio", label: "Process" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
