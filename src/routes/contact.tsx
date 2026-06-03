@@ -47,7 +47,7 @@ function ContactPage() {
                 {[
                   { id: "name", label: "Your name" },
                   { id: "email", label: "Work email", type: "email" },
-                  { id: "company", label: "Company" },
+                  { id: "company", label: "Company (optional)" },
                 ].map((f) => (
                   <div key={f.id}>
                     <label className="text-xs uppercase tracking-widest text-muted-foreground" htmlFor={f.id}>
