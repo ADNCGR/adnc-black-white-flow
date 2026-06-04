@@ -21,7 +21,7 @@ function ContactPage() {
       <section className="fade-section">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-28 grid md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-6">
-            <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Contact</p>
+            <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Contact</p>
             <h1 className="font-display text-4xl md:text-7xl mt-4 text-balance break-words">Let's build something worth opening every day.</h1>
             <p className="mt-6 md:mt-8 text-base md:text-lg text-ink-soft max-w-md">
               Share a few details and the right person on our team will reply within one
