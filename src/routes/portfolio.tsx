@@ -95,7 +95,29 @@ function WorkPage() {
       <section className="fade-section">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
           <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">How we work</p>
-...
+          <h1
+            className="font-display font-medium tracking-[-0.045em] leading-[0.9] md:leading-[0.85] mt-6 text-balance break-words"
+            style={{ fontSize: "clamp(2.5rem, 10vw, 12rem)" }}
+          >
+            Two paths <br />
+            <span className="italic font-light">into the studio.</span>
+          </h1>
+          <p className="mt-8 md:mt-12 text-base md:text-xl text-ink-soft max-w-3xl leading-relaxed">
+            ADNC Group works with two distinct kinds of partners: independent
+            founders building from an idea, and established companies looking to
+            ship or operate something serious. The engagement model is different
+            for each, by design. Both are built around the same principle:
+            clarity from day one, signed scope, and real work delivered on
+            schedule.
+          </p>
+        </div>
+      </section>
+
+      {/* TRACK A */}
+      <section className="bg-paper-soft border-t border-border">
+        <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
+          <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
+            <div className="md:col-span-4">
               <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track A</p>
               <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
                 Founders &amp; independent operators.
@@ -137,9 +159,68 @@ function WorkPage() {
           {/* What the founder gets */}
           <div className="mt-16 md:mt-32">
             <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
-...
+              What the founder gets
+            </p>
+            <h3 className="font-display text-3xl md:text-5xl mt-4 max-w-3xl text-balance">
+              A real seat inside the studio.
+            </h3>
+
+            <div className="mt-10 md:mt-12 grid md:grid-cols-2 gap-px bg-border">
+              {founderGets.map((f, i) => (
+                <div
+                  key={f.t}
+                  data-reveal
+                  style={{ ["--reveal-delay" as never]: `${i * 60}ms` }}
+                  className="bg-paper-soft p-6 md:p-10"
+                >
+                  <h4 className="font-display text-xl md:text-3xl">{f.t}</h4>
+                  <p className="mt-3 md:mt-4 text-ink-soft text-base md:text-lg line-clamp-5 md:line-clamp-none">{f.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TRACK B */}
+      <section className="bg-ink text-paper relative overflow-hidden">
+        <div className="absolute inset-0 grain opacity-50 pointer-events-none" />
+        <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36 relative">
+          <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
+            <div className="md:col-span-4">
               <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track B</p>
-...
+              <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
+                Established <span className="italic font-light text-outline-paper">companies.</span>
+              </h2>
+            </div>
+            <div className="md:col-span-8 md:pt-10">
+              <p className="text-base md:text-lg text-paper/70 max-w-2xl">
+                For organizations with an existing structure, internal teams,
+                and a formal decision-making process.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-px bg-paper/10">
+            {trackBPoints.map((p, i) => (
+              <div
+                key={p.t}
+                data-reveal
+                style={{ ["--reveal-delay" as never]: `${i * 80}ms` }}
+                className="bg-ink p-6 md:p-12"
+              >
+                <h3 className="font-display text-2xl md:text-4xl break-words">{p.t}</h3>
+                <p className="mt-4 md:mt-6 text-paper/70 text-base md:text-lg line-clamp-5 md:line-clamp-none">{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* CLOSING + CTA */}
+      <section className="bg-paper relative">
+        <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-40 text-center">
           <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
             One studio
           </p>
