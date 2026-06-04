@@ -94,7 +94,7 @@ function WorkPage() {
       {/* HERO */}
       <section className="fade-section">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">How we work</p>
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">How we work</p>
           <h1
             className="font-display font-medium tracking-[-0.045em] leading-[0.9] md:leading-[0.85] mt-6 text-balance break-words"
             style={{ fontSize: "clamp(2.5rem, 10vw, 12rem)" }}
@@ -118,7 +118,7 @@ function WorkPage() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
           <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
             <div className="md:col-span-4">
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Track A</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track A</p>
               <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
                 Founders &amp; independent operators.
               </h2>
@@ -158,7 +158,7 @@ function WorkPage() {
 
           {/* What the founder gets */}
           <div className="mt-16 md:mt-32">
-            <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">
+            <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
               What the founder gets
             </p>
             <h3 className="font-display text-3xl md:text-5xl mt-4 max-w-3xl text-balance">
@@ -188,7 +188,7 @@ function WorkPage() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36 relative">
           <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
             <div className="md:col-span-4">
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Track B</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track B</p>
               <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
                 Established <span className="italic font-light text-outline-paper">companies.</span>
               </h2>
@@ -221,7 +221,7 @@ function WorkPage() {
       {/* CLOSING + CTA */}
       <section className="bg-paper relative">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-40 text-center">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
             One studio
           </p>
           <h2

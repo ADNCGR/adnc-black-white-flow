@@ -18,13 +18,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const stats = [
-  { k: "60+", v: "Web & mobile applications delivered to production" },
-  { k: "24/7", v: "Internalized customer support & call center coverage" },
-  { k: "4.9", v: "Average client satisfaction across engagements" },
-  { k: "02", v: "Sides — we build, and we operate" },
-];
-
 const services = [
   {
     n: "01",
@@ -40,13 +33,11 @@ const services = [
     n: "03",
     t: "Customer support & internalized call center",
     d: "An in-house support organization and call center handling your end-users across every channel. Fully integrated with the product team that built the app, so feedback loops close in hours, not weeks.",
-
   },
   {
     n: "04",
     t: "B2B growth & client acquisition",
     d: "We go to market for the platforms we operate. Sourcing enterprise clients, structuring partnerships and driving the B2B pipeline that turns products into businesses.",
-
   },
 ];
 
@@ -73,7 +64,7 @@ function Home() {
 
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 pt-10 md:pt-16 pb-12">
           {/* Top eyebrow rail — hidden on mobile (empty) */}
-          <div className="hidden md:flex items-center justify-between uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm mb-10">
+          <div className="hidden md:flex items-center justify-between uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans mb-10">
             <span className="text-slate-950">​</span>
             <span className="hidden md:inline">​</span>
             <span className="text-zinc-950">​</span>
@@ -159,7 +150,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
           <div className="flex items-end justify-between mb-10 md:mb-16">
             <div>
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Chapter 01 — The model</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Chapter 01 — The model</p>
               <h2 className="font-display text-4xl md:text-7xl mt-4 max-w-3xl text-balance">
                 One partner. <span className="italic font-light">Two sides.</span>
               </h2>
@@ -173,7 +164,7 @@ function Home() {
                 01
               </div>
               <div className="relative">
-                <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">OPERATE</p>
+                <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">OPERATE</p>
                 <h3 className="font-display text-4xl md:text-6xl mt-4">Build.</h3>
                 <p className="mt-6 text-ink-soft text-base md:text-lg max-w-md">
                   {"\n"}
@@ -194,7 +185,7 @@ function Home() {
                 02
               </div>
               <div className="relative">
-                <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Side B</p>
+                <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Side B</p>
                 <h3 className="font-display text-4xl md:text-6xl mt-4">Operate.</h3>
                 <p className="mt-6 text-paper/70 text-base md:text-lg max-w-md">
                   Then we run them. DevOps and scaling, an internalized customer support
@@ -222,7 +213,7 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-40 relative">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-12 md:mb-20">
             <div>
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Capabilities</p>
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Capabilities</p>
               <h2 className="font-display text-4xl md:text-7xl mt-4 max-w-3xl text-balance">
                 Engineering, operations and growth — <span className="italic font-light text-outline-paper">under one roof.</span>
               </h2>
@@ -262,8 +253,8 @@ function Home() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-40">
           <div className="grid md:grid-cols-12 gap-10 mb-12 md:mb-20">
             <div className="md:col-span-5">
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">METHOD</p>
-              <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance">
+              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">METHOD</p>
+              <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
                 From a first call to a platform in production — and beyond.
               </h2>
             </div>
@@ -301,7 +292,7 @@ function Home() {
         <div className="absolute inset-0 grain opacity-40 pointer-events-none" />
         <div className="orb orb-paper w-[50vw] h-[50vw] -bottom-[20vw] -right-[15vw] drift-x" aria-hidden />
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-48 relative">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Talk</p>
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Talk</p>
           <h2
             className="font-display font-medium mt-6 leading-[0.9] md:leading-[0.85] tracking-[-0.045em] text-balance break-words"
             style={{ fontSize: "clamp(2.5rem, 11vw, 14rem)" }}

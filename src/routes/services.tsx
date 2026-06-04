@@ -41,7 +41,7 @@ function ServicesPage() {
     <Layout>
       <section className="fade-section">
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-28">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-serif font-bold text-sm">Services</p>
+          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Services</p>
           <p className="mt-6 md:mt-8 text-base md:text-lg text-ink-soft max-w-2xl">
             ADNC Group is two sides of the same business: senior product engineering
             and a full operations arm — DevOps, an internalized customer support and
