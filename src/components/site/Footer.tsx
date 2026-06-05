@@ -11,7 +11,7 @@ export function Footer() {
               <img src={logoWhite} alt="ADNC Group" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-paper/70 max-w-md text-balance text-sm md:text-base">
-              We design, engineer and operate complex software for ambitious companies. A studio of senior engineers, designers and product strategists, building web and mobile platforms that ship and scale.
+              We specialize in complex systems and complex applications. We build them, bring you the business, and support them for the long run. We may even invest in you.
             </p>
           </div>
 
