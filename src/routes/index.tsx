@@ -22,7 +22,7 @@ const services = [
   {
     n: "01",
     t: "Web & mobile product engineering",
-    d: "Talk",
+    d: "From architecture to App Store. We build production-grade web platforms and native iOS & Android apps — full stack, with distributed backends, real-time infrastructure and applied AI.",
   },
   {
     n: "02",
@@ -167,7 +167,7 @@ function Home() {
                 <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">OPERATE</p>
                 <h3 className="font-display text-4xl md:text-6xl mt-4">Build.</h3>
                 <p className="mt-6 text-ink-soft text-base md:text-lg max-w-md">
-                  {"\n"}
+                  We design, architect and ship complex web and mobile applications — across the full stack. Native iOS & Android, distributed backends, real-time systems and applied AI, all the way to production.
                 </p>
                 <ul className="mt-8 md:mt-10 space-y-3 text-ink">
                   {["Product strategy & discovery", "Web platforms (React, Next, TanStack)", "Native iOS & Android", "Realtime backends & APIs", "Applied AI & data"].map((i) => (

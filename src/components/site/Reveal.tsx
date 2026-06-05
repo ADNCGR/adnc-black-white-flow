@@ -14,7 +14,10 @@ export function RevealOnScroll() {
       },
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
-    els.forEach((el) => io.observe(el));
+    els.forEach((el) => {
+      el.classList.add("will-reveal");
+      io.observe(el);
+    });
     return () => io.disconnect();
   }, []);
   return null;
