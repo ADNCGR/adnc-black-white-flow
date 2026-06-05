@@ -72,7 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ADNC Group — Complex mobile applications, engineered" },
+      { title: "ADNC Group | Complex mobile applications, engineered" },
       { name: "description", content: "ADNC Group is a senior product studio engineering complex mobile applications." },
       { name: "author", content: "ADNC Group" },
       { property: "og:type", content: "website" },

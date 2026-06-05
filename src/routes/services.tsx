@@ -4,7 +4,7 @@ import { Layout } from "@/components/site/Layout";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — ADNC Group" },
+      { title: "Services | ADNC Group" },
       { name: "description", content: "Web & mobile engineering, DevOps & scaling, internalized customer support and B2B growth — the full build & operate stack." },
       { property: "og:title", content: "Services — ADNC Group" },
       { property: "og:description", content: "Build & operate complex web and mobile applications." },

@@ -5,7 +5,7 @@ import { Ticker } from "@/components/site/Ticker";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ADNC Group — We build and operate complex web & mobile applications" },
+      { title: "ADNC Group | We build and operate complex web & mobile applications" },
       {
         name: "description",
         content:
