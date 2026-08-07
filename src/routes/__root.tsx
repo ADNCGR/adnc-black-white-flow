@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { OG_IMAGE, ORGANIZATION_JSONLD } from "@/lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -76,7 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "ADNC Group is a senior product studio engineering complex mobile applications." },
       { name: "author", content: "ADNC Group" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "ADNC Group" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
@@ -100,6 +105,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: ORGANIZATION_JSONLD }}
+        />
       </head>
       <body>
         {children}

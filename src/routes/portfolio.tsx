@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/portfolio")({
-  head: () => ({
-    meta: [
+  head: () =>
+    seoHead("/portfolio", [
       { title: "How we work | ADNC Group" },
       {
         name: "description",
@@ -15,8 +16,7 @@ export const Route = createFileRoute("/portfolio")({
         property: "og:description",
         content: "Two engagement tracks. One studio. One standard.",
       },
-    ],
-  }),
+    ]),
   component: WorkPage,
 });
 

@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
+  head: () =>
+    seoHead("/about", [
       { title: "About | ADNC Group" },
       { name: "description", content: "ADNC Group is a senior mobile product studio. Meet the team and our principles." },
       { property: "og:title", content: "About — ADNC Group" },
       { property: "og:description", content: "Senior mobile product studio." },
-    ],
-  }),
+    ]),
   component: AboutPage,
 });
 

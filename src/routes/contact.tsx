@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Layout } from "@/components/site/Layout";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
+  head: () =>
+    seoHead("/contact", [
       { title: "Contact | ADNC Group" },
       { name: "description", content: "Tell us about your mobile project. We reply within one business day." },
       { property: "og:title", content: "Contact — ADNC Group" },
       { property: "og:description", content: "Talk to our team." },
-    ],
-  }),
+    ]),
   component: ContactPage,
 });
 

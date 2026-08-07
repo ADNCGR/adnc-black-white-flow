@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { Ticker } from "@/components/site/Ticker";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
+  head: () =>
+    seoHead("/", [
       { title: "ADNC Group | We build and operate complex web & mobile applications" },
       {
         name: "description",
@@ -13,8 +14,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "ADNC Group — Build & Operate" },
       { property: "og:description", content: "Two sides, one partner: product engineering and full operations for web & mobile apps." },
-    ],
-  }),
+    ]),
   component: Home,
 });
 
