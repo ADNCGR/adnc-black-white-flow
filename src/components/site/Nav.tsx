@@ -28,6 +28,7 @@ export function Nav() {
     >
       <div className="mx-auto max-w-7xl px-4">
         <div
+          data-cursor=""
           className={`flex items-center justify-between rounded-full border border-border/80 transition-all px-4 sm:px-6 ${
             scrolled ? "bg-paper/90 shadow-sm" : "bg-paper/60"
           }`}
