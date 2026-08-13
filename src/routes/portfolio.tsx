@@ -1,6 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
+import { TiltCard } from "@/components/site/TiltCard";
+import { CorporateRow } from "@/components/site/CorporateRow";
 import { seoHead } from "@/lib/seo";
+import { useMode } from "@/lib/mode-context";
+import { Users, CalendarClock, Compass, GitBranch, Handshake, Workflow } from "lucide-react";
 
 export const Route = createFileRoute("/portfolio")({
   head: () =>
@@ -52,24 +56,24 @@ const trackAPhases = [
 
 const founderGets = [
   {
-    t: "Workspace",
-    d: "A private office inside ADNC Group, plus full 24/7 access to our three locations in Casablanca.",
-  },
-  {
     t: "Dedicated resources",
     d: "A defined allocation of human and technical resources ringfenced for your project: engineers, designers, support staff, and infrastructure. The allocation is contractual, not best-effort.",
+    Icon: Users,
   },
   {
     t: "Daily access to the team",
     d: "Two fixed meeting windows every working day, 08:00 to 09:00 and 17:00 to 18:00. You can request a session with any team member assigned to your project: lead engineer, designer, support manager, growth lead. Availability is guaranteed inside these windows.",
+    Icon: CalendarClock,
   },
   {
     t: "Strategic authority",
     d: "You retain full authority to propose new directions and set the product vision. ADNC Group operates as the execution partner, not the decision-maker.",
+    Icon: Compass,
   },
   {
     t: "Scope evolution",
     d: "The base engagement covers the scope defined at signature. Any new feature, redirection, or marketing-driven addition that materially extends the timeline or workload is costed and quoted separately, with a transparent change order before any work begins.",
+    Icon: GitBranch,
   },
 ];
 
@@ -77,26 +81,31 @@ const trackBPoints = [
   {
     t: "Engagement model",
     d: "We integrate directly with your existing stakeholders. No private offices, no founder-style onboarding. The studio plugs into your organization and executes against a defined brief, with senior project leadership on our side and a clear single point of contact on yours.",
+    Icon: Handshake,
   },
   {
     t: "Meeting cadence",
     d: "Working sessions are conducted in person, either at your offices or at ours, within two fixed daily windows: 08:00 to 09:00 and 17:00 to 18:00. This rhythm enforces fast decisions and eliminates the meeting drift that delays most enterprise projects.",
+    Icon: CalendarClock,
   },
   {
     t: "Process",
     d: "Feasibility, roadmap, production, and operations follow the same standards as Track A, adapted to your governance, procurement, and compliance requirements. Pricing, timelines, and team composition are negotiated against your specific brief.",
+    Icon: Workflow,
   },
 ];
 
 function WorkPage() {
+  const { mode } = useMode();
+  const isDark = mode === "consulting";
+
   return (
     <Layout>
       {/* HERO */}
       <section className="fade-section">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">How we work</p>
           <h1
-            className="font-display font-medium tracking-[-0.045em] leading-[0.9] md:leading-[0.85] mt-6 text-balance break-words"
+            className="font-display font-medium tracking-[-0.045em] leading-[0.9] md:leading-[0.85] text-balance break-words"
             style={{ fontSize: "clamp(2.5rem, 10vw, 12rem)" }}
           >
             Two paths <br />
@@ -118,8 +127,7 @@ function WorkPage() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36">
           <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
             <div className="md:col-span-4">
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track A</p>
-              <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
+              <h2 className="font-display text-4xl md:text-6xl text-balance break-words">
                 Founders &amp; independent operators.
               </h2>
             </div>
@@ -158,26 +166,29 @@ function WorkPage() {
 
           {/* What the founder gets */}
           <div className="mt-16 md:mt-32">
-            <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
-              What the founder gets
-            </p>
-            <h3 className="font-display text-3xl md:text-5xl mt-4 max-w-3xl text-balance">
+            <h3 className="font-display text-3xl md:text-5xl max-w-3xl text-balance">
               A real seat inside the studio.
             </h3>
 
-            <div className="mt-10 md:mt-12 grid md:grid-cols-2 gap-px bg-border">
-              {founderGets.map((f, i) => (
-                <div
-                  key={f.t}
-                  data-reveal
-                  style={{ ["--reveal-delay" as never]: `${i * 60}ms` }}
-                  className="bg-paper-soft p-6 md:p-10"
-                >
-                  <h4 className="font-display text-xl md:text-3xl">{f.t}</h4>
-                  <p className="mt-3 md:mt-4 text-ink-soft text-base md:text-lg line-clamp-5 md:line-clamp-none">{f.d}</p>
-                </div>
-              ))}
-            </div>
+            {!isDark ? (
+              <div className="mt-10 md:mt-12 grid md:grid-cols-2 gap-6">
+                {founderGets.map((f, i) => (
+                  <TiltCard key={f.t} index={i} className="bg-paper-soft border border-border rounded-2xl p-6 md:p-10">
+                    <f.Icon className="w-6 h-6 text-ink/30" strokeWidth={1.5} />
+                    <h4 className="font-sans font-semibold text-lg md:text-xl mt-4">{f.t}</h4>
+                    <p className="mt-3 md:mt-4 text-ink-soft text-base md:text-lg line-clamp-5 md:line-clamp-none">{f.d}</p>
+                  </TiltCard>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-10 md:mt-12">
+                {founderGets.map((f, i) => (
+                  <CorporateRow key={f.t} n={String(i + 1).padStart(2, "0")} title={f.t} isDark={false} index={i}>
+                    {f.d}
+                  </CorporateRow>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -188,8 +199,7 @@ function WorkPage() {
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-16 md:py-36 relative">
           <div className="grid md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
             <div className="md:col-span-4">
-              <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">Track B</p>
-              <h2 className="font-display text-4xl md:text-6xl mt-4 text-balance break-words">
+              <h2 className="font-display text-4xl md:text-6xl text-balance break-words">
                 Established <span className="italic font-light text-outline-paper">companies.</span>
               </h2>
             </div>
@@ -201,19 +211,25 @@ function WorkPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-px bg-paper/10">
-            {trackBPoints.map((p, i) => (
-              <div
-                key={p.t}
-                data-reveal
-                style={{ ["--reveal-delay" as never]: `${i * 80}ms` }}
-                className="bg-ink p-6 md:p-12"
-              >
-                <h3 className="font-display text-2xl md:text-4xl break-words">{p.t}</h3>
-                <p className="mt-4 md:mt-6 text-paper/70 text-base md:text-lg line-clamp-5 md:line-clamp-none">{p.d}</p>
-              </div>
-            ))}
-          </div>
+          {!isDark ? (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trackBPoints.map((p, i) => (
+                <TiltCard key={p.t} index={i} className="bg-[oklch(0.1_0_0)] border border-paper/10 rounded-2xl p-6 md:p-12">
+                  <p.Icon className="w-6 h-6 text-paper/30" strokeWidth={1.5} />
+                  <h3 className="font-sans font-semibold text-lg md:text-xl mt-4 break-words">{p.t}</h3>
+                  <p className="mt-4 md:mt-6 text-paper/70 text-base md:text-lg line-clamp-5 md:line-clamp-none">{p.d}</p>
+                </TiltCard>
+              ))}
+            </div>
+          ) : (
+            <div>
+              {trackBPoints.map((p, i) => (
+                <CorporateRow key={p.t} n={String(i + 1).padStart(2, "0")} title={p.t} isDark index={i}>
+                  {p.d}
+                </CorporateRow>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -221,11 +237,8 @@ function WorkPage() {
       {/* CLOSING + CTA */}
       <section className="bg-paper relative">
         <div className="mx-auto max-w-[110rem] px-6 md:px-10 py-20 md:py-40 text-center">
-          <p className="uppercase tracking-[0.25em] text-muted-foreground font-bold text-sm font-sans">
-            One studio
-          </p>
           <h2
-            className="font-display font-medium mt-6 leading-[0.9] md:leading-[0.85] tracking-[-0.045em] text-balance break-words"
+            className="font-display font-medium leading-[0.9] md:leading-[0.85] tracking-[-0.045em] text-balance break-words"
             style={{ fontSize: "clamp(2rem, 9vw, 10rem)" }}
           >
             One studio, <br />
