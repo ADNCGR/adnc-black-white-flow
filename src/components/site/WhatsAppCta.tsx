@@ -18,7 +18,7 @@ export function WhatsAppCta({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
       className={`wa-fab group fixed bottom-5 right-5 md:bottom-8 md:right-8 z-50 inline-flex items-center rounded-full border p-4 transition-colors duration-500 ${
         isDark
           ? "bg-paper text-ink border-ink/10 hover:bg-paper/90"
-          : "bg-ink text-paper border-paper/10 hover:bg-ink-soft shadow-lg"
+          : "bg-ink text-paper border-paper/30 hover:bg-ink-soft shadow-lg"
       }`}
     >
       <span className={`wa-ring ${isDark ? "border-paper/40" : "border-ink/25"}`} aria-hidden />
