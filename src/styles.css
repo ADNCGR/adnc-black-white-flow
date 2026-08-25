@@ -368,6 +368,32 @@
     color: var(--color-paper);
   }
 
+  /* === WhatsApp floating CTA === */
+  .wa-fab {
+    animation: wa-in 0.6s cubic-bezier(.2,.8,.2,1) 0.9s both;
+  }
+  @keyframes wa-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .wa-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border-width: 1px;
+    border-style: solid;
+    pointer-events: none;
+    animation: wa-pulse 3.2s cubic-bezier(.2,.8,.2,1) infinite;
+  }
+  @keyframes wa-pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    70%, 100% { transform: scale(1.5); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wa-fab { animation: none; }
+    .wa-ring { animation: none; opacity: 0; }
+  }
+
   /* === Mode transition === */
   .mode-content {
     animation: mode-enter 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;

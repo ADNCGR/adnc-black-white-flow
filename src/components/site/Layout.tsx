@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { Cursor } from "./Cursor";
 import { RevealOnScroll } from "./Reveal";
 import { ModeSwitch } from "./ModeSwitch";
+import { WhatsAppCta } from "./WhatsAppCta";
 import { useMode } from "@/lib/mode-context";
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -30,6 +31,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <main className="flex-1">{children}</main>
       </div>
       <Footer />
+      <WhatsAppCta mode={mode} />
     </div>
   );
 }
