@@ -43,7 +43,17 @@ export const sendContactMessage = createServerFn({ method: "POST" })
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.error("RESEND_API_KEY is missing — contact message not sent");
+      // Temporary diagnostic: names only, never values. Tells us apart a
+      // variable that never reached the deployment from a misspelled or
+      // empty one. Remove once delivery is confirmed working.
+      console.error(
+        "RESEND_API_KEY is missing — contact message not sent.",
+        `env vars visible: ${Object.keys(process.env).length};`,
+        `matching /resend|contact|mail/i: ${JSON.stringify(
+          Object.keys(process.env).filter((k) => /resend|contact|mail/i.test(k)),
+        )};`,
+        `RESEND_API_KEY present but empty: ${"RESEND_API_KEY" in process.env}`,
+      );
       throw new Error("Email is not configured yet. Please write to us directly.");
     }
 
