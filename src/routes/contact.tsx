@@ -59,15 +59,6 @@ function ContactPage() {
                   </div>
                 ))}
                 <div>
-                  <label className="text-xs uppercase tracking-widest text-muted-foreground" htmlFor="budget">Expected budget</label>
-                  <select id="budget" className="mt-2 block w-full bg-transparent border-b border-border focus:border-ink outline-none py-3">
-                    <option>Up to $50k</option>
-                    <option>$50k – $150k</option>
-                    <option>$150k – $500k</option>
-                    <option>$500k+</option>
-                  </select>
-                </div>
-                <div>
                   <label className="text-xs uppercase tracking-widest text-muted-foreground" htmlFor="msg">Project</label>
                   <textarea id="msg" rows={4} className="mt-2 block w-full bg-transparent border-b border-border focus:border-ink outline-none py-3 resize-none" />
                 </div>
