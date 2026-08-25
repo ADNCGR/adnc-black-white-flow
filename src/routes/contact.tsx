@@ -32,6 +32,7 @@ function ContactPage() {
           name: String(fields.get("name") ?? ""),
           email: String(fields.get("email") ?? ""),
           company: String(fields.get("company") ?? ""),
+          phone: String(fields.get("phone") ?? ""),
           message: String(fields.get("message") ?? ""),
           website: String(fields.get("website") ?? ""),
         },
@@ -77,6 +78,7 @@ function ContactPage() {
                 {[
                   { id: "name", label: "Your name", required: true },
                   { id: "email", label: "Email", type: "email", required: true },
+                  { id: "phone", label: "Phone (optional)", type: "tel", required: false },
                   { id: "company", label: "Company (optional)", required: false },
                 ].map((f) => (
                   <div key={f.id}>

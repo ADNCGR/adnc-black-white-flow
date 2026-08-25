@@ -19,6 +19,7 @@ const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? "ADNC Group <onboarding@res
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
   email: z.string().trim().email("Please enter a valid email address").max(200),
+  phone: z.string().trim().max(40).optional().default(""),
   company: z.string().trim().max(120).optional().default(""),
   message: z.string().trim().min(1, "Please describe your project").max(5000),
   // Hidden field: humans leave it empty, bots fill it in.
@@ -43,21 +44,12 @@ export const sendContactMessage = createServerFn({ method: "POST" })
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      // Temporary diagnostic: names only, never values. Tells us apart a
-      // variable that never reached the deployment from a misspelled or
-      // empty one. Remove once delivery is confirmed working.
-      console.error(
-        "RESEND_API_KEY is missing — contact message not sent.",
-        `env vars visible: ${Object.keys(process.env).length};`,
-        `matching /resend|contact|mail/i: ${JSON.stringify(
-          Object.keys(process.env).filter((k) => /resend|contact|mail/i.test(k)),
-        )};`,
-        `RESEND_API_KEY present but empty: ${"RESEND_API_KEY" in process.env}`,
-      );
+      console.error("RESEND_API_KEY is missing — contact message not sent");
       throw new Error("Email is not configured yet. Please write to us directly.");
     }
 
     const company = data.company || "—";
+    const phone = data.phone || "—";
     const request = fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -72,6 +64,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         text: [
           `Name:    ${data.name}`,
           `Email:   ${data.email}`,
+          `Phone:   ${phone}`,
           `Company: ${company}`,
           "",
           data.message,
@@ -79,6 +72,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
         html: [
           `<p><strong>Name:</strong> ${escapeHtml(data.name)}</p>`,
           `<p><strong>Email:</strong> ${escapeHtml(data.email)}</p>`,
+          `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>`,
           `<p><strong>Company:</strong> ${escapeHtml(company)}</p>`,
           `<p style="white-space:pre-wrap">${escapeHtml(data.message)}</p>`,
         ].join(""),
