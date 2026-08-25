@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { Cursor } from "./Cursor";
@@ -10,6 +11,8 @@ import { useMode } from "@/lib/mode-context";
 export function Layout({ children }: { children: ReactNode }) {
   const { mode, setMode } = useMode();
   const isDark = mode === "consulting";
+  // The mode itself stays site-wide; only its control is homepage-only.
+  const isHome = useLocation({ select: (l) => l.pathname === "/" });
   return (
     <div
       className={`min-h-screen flex flex-col relative overflow-x-hidden transition-colors duration-700 ${
@@ -21,13 +24,11 @@ export function Layout({ children }: { children: ReactNode }) {
       <RevealOnScroll />
       <Nav mode={mode} />
       <div className="flex-1 flex flex-col pt-24">
-        <div className="relative z-40 -mb-2 md:-mb-4">
-          <ModeSwitch
-            mode={mode}
-            onModeChange={setMode}
-            theme={isDark ? "dark" : "light"}
-          />
-        </div>
+        {isHome && (
+          <div className="relative z-40 -mb-2 md:-mb-4">
+            <ModeSwitch mode={mode} onModeChange={setMode} theme={isDark ? "dark" : "light"} />
+          </div>
+        )}
         <main className="flex-1">{children}</main>
       </div>
       <Footer />
