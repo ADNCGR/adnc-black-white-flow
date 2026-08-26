@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { useLocation } from "@tanstack/react-router";
 
 export type Mode = "dev" | "consulting";
 
@@ -24,14 +25,26 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   }, [mode]);
 
   return (
-    <ModeContext.Provider value={{ mode, setMode: setModeState }}>
-      {children}
-    </ModeContext.Provider>
+    <ModeContext.Provider value={{ mode, setMode: setModeState }}>{children}</ModeContext.Provider>
   );
 }
 
+/**
+ * Returns the mode as it should apply to the current page.
+ *
+ * The Consulting rendering is scoped to the homepage only: on every other
+ * route this hook forces "dev", so navigating away from "/" always shows
+ * the default layout regardless of what the visitor picked. The stored
+ * choice is preserved, so returning to "/" restores their selection.
+ * `setMode` always writes to the shared state (the switch only lives on
+ * the homepage, so writers are already scoped).
+ */
 export function useMode() {
   const ctx = useContext(ModeContext);
   if (!ctx) throw new Error("useMode must be used within a ModeProvider");
-  return ctx;
+  const isHome = useLocation({ select: (l) => l.pathname === "/" });
+  return {
+    mode: isHome ? ctx.mode : ("dev" as Mode),
+    setMode: ctx.setMode,
+  };
 }
