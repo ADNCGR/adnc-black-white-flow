@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from "react";
+import { useT } from "@/lib/i18n";
 
 export type Mode = "dev" | "consulting";
 
@@ -9,10 +10,14 @@ interface ModeSwitchProps {
 }
 
 export function ModeSwitch({ mode, onModeChange, theme = "light" }: ModeSwitchProps) {
+  const t = useT();
   const containerRef = useRef<HTMLDivElement>(null);
   const devRef = useRef<HTMLButtonElement>(null);
   const consultRef = useRef<HTMLButtonElement>(null);
-  const [pillStyle, setPillStyle] = useState<{ left: number; width: number }>({ left: 4, width: 0 });
+  const [pillStyle, setPillStyle] = useState<{ left: number; width: number }>({
+    left: 4,
+    width: 0,
+  });
 
   const updatePill = useCallback(() => {
     const activeRef = mode === "dev" ? devRef : consultRef;
@@ -45,7 +50,7 @@ export function ModeSwitch({ mode, onModeChange, theme = "light" }: ModeSwitchPr
         className="mode-switch"
         data-theme={theme}
         role="tablist"
-        aria-label="Site mode"
+        aria-label={t.modeSwitch.label}
       >
         <div
           className="mode-switch-pill"
@@ -63,7 +68,7 @@ export function ModeSwitch({ mode, onModeChange, theme = "light" }: ModeSwitchPr
             onModeChange("dev");
           }}
         >
-          Development
+          {t.modeSwitch.dev}
         </button>
         <button
           ref={consultRef}
@@ -76,7 +81,7 @@ export function ModeSwitch({ mode, onModeChange, theme = "light" }: ModeSwitchPr
             onModeChange("consulting");
           }}
         >
-          Consulting
+          {t.modeSwitch.consulting}
         </button>
       </div>
     </div>

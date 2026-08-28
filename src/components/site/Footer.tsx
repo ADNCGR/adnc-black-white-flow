@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import logoWhite from "@/assets/logo-white.png";
+import { useT } from "@/lib/i18n";
 
 export function Footer() {
+  const t = useT();
   return (
     <footer className="bg-ink text-paper">
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
@@ -11,37 +13,58 @@ export function Footer() {
               <img src={logoWhite} alt="ADNC Group" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-paper/70 max-w-md text-balance text-sm md:text-base">
-              We specialize in complex systems and complex applications. We build them, bring you the business, and support them for the long run. We may even invest in you.
+              {t.footer.blurb}
             </p>
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">Studio</h4>
+            <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">
+              {t.footer.studio}
+            </h4>
             <ul className="space-y-2 text-paper/80 text-sm md:text-base">
-              <li><Link to="/services" className="hover:text-paper">Services</Link></li>
-              <li><Link to="/portfolio" className="hover:text-paper">Process</Link></li>
-              <li><Link to="/about" className="hover:text-paper">About</Link></li>
-              <li><Link to="/contact" className="hover:text-paper">Contact</Link></li>
+              <li>
+                <Link to="/services" className="hover:text-paper">
+                  {t.nav.services}
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="hover:text-paper">
+                  {t.nav.process}
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-paper">
+                  {t.nav.about}
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-paper">
+                  {t.nav.contact}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">Contact</h4>
-            <p className="text-paper/80 text-sm md:text-base">Available worldwide · HQ Casablanca, Morocco</p>
+            <h4 className="text-sm uppercase tracking-widest text-paper/50 mb-4">
+              {t.footer.contact}
+            </h4>
+            <p className="text-paper/80 text-sm md:text-base">{t.footer.availability}</p>
             <Link
               to="/contact"
               className="inline-flex items-center mt-6 rounded-full bg-paper text-ink px-5 py-2.5 text-sm font-medium hover:bg-paper/90 transition"
             >
-              Start a project →
+              {t.footer.cta}
             </Link>
           </div>
         </div>
 
         <div className="mt-12 md:mt-16 pt-6 border-t border-paper/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs md:text-sm text-paper/50">
-          <p>© {new Date().getFullYear()} ADNC Group. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} ADNC Group. {t.footer.rights}
+          </p>
         </div>
       </div>
     </footer>
-
   );
 }

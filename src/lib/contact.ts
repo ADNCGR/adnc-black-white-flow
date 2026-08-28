@@ -16,6 +16,18 @@ const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "adnccorp@gmail.com";
 // there, set CONTACT_FROM_EMAIL to something like "site@adncgroup.com".
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL ?? "ADNC Group <onboarding@resend.dev>";
 
+/** Visitor-facing failures, in the language the visitor is reading. */
+const MESSAGES = {
+  en: {
+    notConfigured: "Email is not configured yet. Please write to us directly.",
+    sendFailed: "We couldn't send your message. Please try again in a moment.",
+  },
+  fr: {
+    notConfigured: "L'e-mail n'est pas encore configuré. Merci de nous écrire directement.",
+    sendFailed: "Nous n'avons pas pu envoyer votre message. Merci de réessayer dans un instant.",
+  },
+} as const;
+
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
   email: z.string().trim().email("Please enter a valid email address").max(200),
@@ -24,6 +36,8 @@ const contactSchema = z.object({
   message: z.string().trim().min(1, "Please describe your project").max(5000),
   // Hidden field: humans leave it empty, bots fill it in.
   website: z.string().max(0).optional().default(""),
+  // So server-side failures come back in the visitor's own language.
+  lang: z.enum(["en", "fr"]).optional().default("en"),
 });
 
 export type ContactInput = z.input<typeof contactSchema>;
@@ -42,10 +56,12 @@ export const sendContactMessage = createServerFn({ method: "POST" })
     // Honeypot tripped — pretend it worked so the bot doesn't retry.
     if (data.website) return { ok: true as const };
 
+    const m = MESSAGES[data.lang];
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.error("RESEND_API_KEY is missing — contact message not sent");
-      throw new Error("Email is not configured yet. Please write to us directly.");
+      throw new Error(m.notConfigured);
     }
 
     const company = data.company || "—";
@@ -85,13 +101,13 @@ export const sendContactMessage = createServerFn({ method: "POST" })
     } catch (cause) {
       // Network-level failure — keep the raw reason out of the page.
       console.error("Could not reach Resend", cause);
-      throw new Error("We couldn't send your message. Please try again in a moment.");
+      throw new Error(m.sendFailed);
     }
 
     if (!response.ok) {
       // Log the provider's reason server-side; never expose it to the page.
       console.error("Resend rejected the contact message", response.status, await response.text());
-      throw new Error("We couldn't send your message. Please try again in a moment.");
+      throw new Error(m.sendFailed);
     }
 
     return { ok: true as const };

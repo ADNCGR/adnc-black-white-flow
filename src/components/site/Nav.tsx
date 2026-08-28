@@ -2,15 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logoBlack from "@/assets/adnc-logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
-
-const links = [
-  { to: "/services", label: "Services" },
-  { to: "/portfolio", label: "Process" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { useT } from "@/lib/i18n";
 
 export function Nav({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
+  const t = useT();
+  const links = [
+    { to: "/services", label: t.nav.services },
+    { to: "/portfolio", label: t.nav.process },
+    { to: "/about", label: t.nav.about },
+    { to: "/contact", label: t.nav.contact },
+  ] as const;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const isDark = mode === "consulting";
@@ -55,14 +56,10 @@ export function Nav({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
                 key={l.to}
                 to={l.to}
                 className={`px-4 py-2 text-sm transition-colors ${
-                  isDark
-                    ? "text-paper/70 hover:text-paper"
-                    : "text-ink-soft hover:text-ink"
+                  isDark ? "text-paper/70 hover:text-paper" : "text-ink-soft hover:text-ink"
                 }`}
                 activeProps={{
-                  className: `px-4 py-2 text-sm font-medium ${
-                    isDark ? "text-paper" : "text-ink"
-                  }`,
+                  className: `px-4 py-2 text-sm font-medium ${isDark ? "text-paper" : "text-ink"}`,
                 }}
               >
                 {l.label}
@@ -79,26 +76,34 @@ export function Nav({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
                   : "bg-ink text-paper hover:bg-ink-soft"
               }`}
             >
-              {isDark ? "Book consultation" : "Start a project"}
+              {isDark ? t.nav.ctaConsulting : t.nav.ctaDev}
             </Link>
             <button
-              aria-label="Menu"
+              aria-label={t.nav.menu}
               className="md:hidden p-2"
               onClick={() => setOpen((s) => !s)}
             >
               <div className="w-5 space-y-1.5">
-                <span className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "translate-y-1.5 rotate-45" : ""}`} />
-                <span className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "opacity-0" : ""}`} />
-                <span className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "-translate-y-1 -rotate-45" : ""}`} />
+                <span
+                  className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "translate-y-1.5 rotate-45" : ""}`}
+                />
+                <span
+                  className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={`block h-px transition ${isDark ? "bg-paper" : "bg-ink"} ${open ? "-translate-y-1 -rotate-45" : ""}`}
+                />
               </div>
             </button>
           </div>
         </div>
 
         {open && (
-          <div className={`md:hidden mt-2 rounded-2xl border p-4 reveal ${
-            isDark ? "bg-ink border-paper/20 text-paper" : "bg-paper border-border text-ink"
-          }`}>
+          <div
+            className={`md:hidden mt-2 rounded-2xl border p-4 reveal ${
+              isDark ? "bg-ink border-paper/20 text-paper" : "bg-paper border-border text-ink"
+            }`}
+          >
             <div className="flex flex-col">
               {links.map((l) => (
                 <Link
