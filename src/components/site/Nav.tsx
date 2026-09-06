@@ -9,7 +9,6 @@ export function Nav({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
   const links = [
     { to: "/services", label: t.nav.services },
     { to: "/portfolio", label: t.nav.process },
-    { to: "/solutions", label: t.nav.solutions },
     { to: "/about", label: t.nav.about },
     { to: "/contact", label: t.nav.contact },
   ] as const;

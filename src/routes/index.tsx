@@ -3,6 +3,7 @@ import { Layout } from "@/components/site/Layout";
 import { Ticker } from "@/components/site/Ticker";
 import { TiltCard } from "@/components/site/TiltCard";
 import { CorporateRow } from "@/components/site/CorporateRow";
+import { SegmentGrid } from "@/components/site/SegmentGrid";
 import { seoHead } from "@/lib/seo";
 import { content } from "@/lib/content";
 import { useMode } from "@/lib/mode-context";
@@ -156,6 +157,9 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* ============ THREE WAYS IN ============ */}
+        <SegmentGrid isDark={isDark} />
 
         {/* ============ TWO SIDES SPLIT ============ */}
         <section className={isDark ? "bg-ink" : "bg-paper"}>

@@ -14,7 +14,6 @@ const en = {
   nav: {
     services: "Services",
     process: "Process",
-    solutions: "Solutions",
     about: "About",
     contact: "Contact",
     ctaDev: "Start a project",
@@ -428,15 +427,6 @@ const en = {
     errorGeneric: "We couldn't send your message. Please try again in a moment.",
   },
   solutions: {
-    seoTitle: "Solutions | ADNC Group",
-    seoDescription:
-      "Three ways in, one studio: turning a founder's idea into a product, modernising an enterprise's infrastructure, and digitising public services.",
-    ogTitle: "Solutions — ADNC Group",
-    ogDescription: "Startup, enterprise, government — three entry points into the studio.",
-    title: "Three ways in,",
-    titleAccent: "one studio.",
-    intro:
-      "The work is the same standard whoever you are. What changes is where you start from — an idea to build, infrastructure to modernise, or public services to bring online.",
     ctaLabel: "Talk to us",
     ctaAria: "Start a WhatsApp conversation about",
     segments: [
@@ -488,7 +478,6 @@ const fr = {
   nav: {
     services: "Services",
     process: "Méthode",
-    solutions: "Solutions",
     about: "À propos",
     contact: "Contact",
     ctaDev: "Démarrer un projet",
@@ -907,15 +896,6 @@ const fr = {
     errorGeneric: "Nous n'avons pas pu envoyer votre message. Merci de réessayer dans un instant.",
   },
   solutions: {
-    seoTitle: "Solutions | ADNC Group",
-    seoDescription:
-      "Trois portes d'entrée, un seul studio : transformer l'idée d'un fondateur en produit, moderniser l'infrastructure d'une entreprise, digitaliser les services publics.",
-    ogTitle: "Solutions — ADNC Group",
-    ogDescription: "Startup, entreprise, gouvernement — trois portes d'entrée vers le studio.",
-    title: "Trois portes d'entrée,",
-    titleAccent: "un seul studio.",
-    intro:
-      "Le niveau d'exigence est le même quel que soit votre profil. Ce qui change, c'est votre point de départ : une idée à construire, une infrastructure à moderniser, ou des services publics à mettre en ligne.",
     ctaLabel: "Parler",
     ctaAria: "Démarrer une conversation WhatsApp à propos de",
     segments: [

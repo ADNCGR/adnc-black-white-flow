@@ -33,11 +33,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/solutions" className="hover:text-paper">
-                  {t.nav.solutions}
-                </Link>
-              </li>
-              <li>
                 <Link to="/about" className="hover:text-paper">
                   {t.nav.about}
                 </Link>
