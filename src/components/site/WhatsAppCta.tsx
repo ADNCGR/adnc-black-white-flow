@@ -1,12 +1,11 @@
 import { useT } from "@/lib/i18n";
-
-const WHATSAPP_NUMBER = "212609996687";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export function WhatsAppCta({ mode = "dev" }: { mode?: "dev" | "consulting" }) {
   const t = useT();
   const isDark = mode === "consulting";
   // The prefilled message follows the visitor's language.
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t.whatsapp.message)}`;
+  const href = whatsappUrl(t.whatsapp.message);
 
   return (
     <a

@@ -14,6 +14,7 @@ const en = {
   nav: {
     services: "Services",
     process: "Process",
+    solutions: "Solutions",
     about: "About",
     contact: "Contact",
     ctaDev: "Start a project",
@@ -426,6 +427,51 @@ const en = {
     sentBody: "We'll be in touch shortly.",
     errorGeneric: "We couldn't send your message. Please try again in a moment.",
   },
+  solutions: {
+    seoTitle: "Solutions | ADNC Group",
+    seoDescription:
+      "Three ways in, one studio: turning a founder's idea into a product, modernising an enterprise's infrastructure, and digitising public services.",
+    ogTitle: "Solutions — ADNC Group",
+    ogDescription: "Startup, enterprise, government — three entry points into the studio.",
+    title: "Three ways in,",
+    titleAccent: "one studio.",
+    intro:
+      "The work is the same standard whoever you are. What changes is where you start from — an idea to build, infrastructure to modernise, or public services to bring online.",
+    ctaLabel: "Talk to us",
+    ctaAria: "Start a WhatsApp conversation about",
+    segments: [
+      {
+        n: "01",
+        audience: "Startup",
+        title: "Engineer",
+        tagline: "Turn your idea into a product",
+        items: [
+          "Product strategy",
+          "Web & mobile",
+          "Full stack",
+          "Infrastructure",
+          "Production-ready",
+        ],
+        waMessage: "Hi ADNC Group — I'm a founder with an idea I'd like to turn into a product.",
+      },
+      {
+        n: "02",
+        audience: "Enterprise",
+        title: "Operate",
+        tagline: "Modernise your infrastructure",
+        items: ["DevOps & scaling", "Cloud ops", "CI/CD pipelines", "Monitoring", "Maintenance"],
+        waMessage: "Hi ADNC Group — we'd like to talk about modernising our infrastructure.",
+      },
+      {
+        n: "03",
+        audience: "Government",
+        title: "Secure",
+        tagline: "Digitise your public services",
+        items: ["Citizen platform", "Data integration", "Audit trail & compliance"],
+        waMessage: "Hi ADNC Group — we'd like to talk about digitising our public services.",
+      },
+    ],
+  },
   errors: {
     notFoundTitle: "Page not found",
     notFoundBody: "The page you're looking for doesn't exist or has been moved.",
@@ -442,6 +488,7 @@ const fr = {
   nav: {
     services: "Services",
     process: "Méthode",
+    solutions: "Solutions",
     about: "À propos",
     contact: "Contact",
     ctaDev: "Démarrer un projet",
@@ -858,6 +905,60 @@ const fr = {
     sentTitle: "Message bien reçu.",
     sentBody: "Nous revenons vers vous très vite.",
     errorGeneric: "Nous n'avons pas pu envoyer votre message. Merci de réessayer dans un instant.",
+  },
+  solutions: {
+    seoTitle: "Solutions | ADNC Group",
+    seoDescription:
+      "Trois portes d'entrée, un seul studio : transformer l'idée d'un fondateur en produit, moderniser l'infrastructure d'une entreprise, digitaliser les services publics.",
+    ogTitle: "Solutions — ADNC Group",
+    ogDescription: "Startup, entreprise, gouvernement — trois portes d'entrée vers le studio.",
+    title: "Trois portes d'entrée,",
+    titleAccent: "un seul studio.",
+    intro:
+      "Le niveau d'exigence est le même quel que soit votre profil. Ce qui change, c'est votre point de départ : une idée à construire, une infrastructure à moderniser, ou des services publics à mettre en ligne.",
+    ctaLabel: "Parler",
+    ctaAria: "Démarrer une conversation WhatsApp à propos de",
+    segments: [
+      {
+        n: "01",
+        audience: "Startup",
+        title: "Engineer",
+        tagline: "Transformer votre idée en produit",
+        items: [
+          "Stratégie produit",
+          "Web et mobile",
+          "Full stack",
+          "Infrastructure",
+          "Prêt pour la production",
+        ],
+        waMessage:
+          "Bonjour ADNC Group — je suis fondateur et j'aimerais transformer mon idée en produit.",
+      },
+      {
+        n: "02",
+        audience: "Entreprise",
+        title: "Operate",
+        tagline: "Moderniser votre infrastructure",
+        items: [
+          "DevOps et scalabilité",
+          "Exploitation cloud",
+          "Pipelines CI/CD",
+          "Supervision",
+          "Maintenance",
+        ],
+        waMessage:
+          "Bonjour ADNC Group — nous aimerions échanger sur la modernisation de notre infrastructure.",
+      },
+      {
+        n: "03",
+        audience: "Gouvernement",
+        title: "Secure",
+        tagline: "Digitaliser vos services publics",
+        items: ["Plateforme citoyens", "Intégration données", "Audit trail et conformité"],
+        waMessage:
+          "Bonjour ADNC Group — nous aimerions échanger sur la digitalisation de nos services publics.",
+      },
+    ],
   },
   errors: {
     notFoundTitle: "Page introuvable",
