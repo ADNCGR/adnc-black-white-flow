@@ -5,7 +5,8 @@
  * page, each with its own prefilled message so we know which offer the
  * conversation started from.
  */
-export const WHATSAPP_NUMBER = "212609996687";
+// Local form 06 17 39 22 63 → international, no leading zero, no "+".
+export const WHATSAPP_NUMBER = "212617392263";
 
 /** wa.me link that opens a chat with the message already typed. */
 export function whatsappUrl(message: string): string {
